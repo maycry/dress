@@ -1,0 +1,17 @@
+.flash-message{
+	width:330px;
+	position: absolute;
+	font-size: 14px;
+	background-color: rgba(red, 0.5);
+	border: 1px solid rgba(red, 0.7);
+	padding: 20px 30px;
+	left: 50%;
+	top: 40px;
+	margin: 0 auto 0 -195px;
+	border-radius: 10px;
+	box-shadow: 0 10px 40px rgba(black, 0.2);
+}
+#flash-notice{
+	background-color: rgba(green, 0.5);
+	border: 1px solid rgba(green, 0.7);
+}

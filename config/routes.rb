@@ -1,4 +1,12 @@
 Dress::Application.routes.draw do
+  resources :products
+
+
+  get "/log_in" => "sessions#new", :as =>"log_in"
+  get "/log_out" => "sessions#destroy", :as =>"log_out"
+  get "/test" => "sessions#test", :as => "test"
+  resources :sessions
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +56,7 @@ Dress::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'products#index'
 
   # See how all your routes lay out with "rake routes"
 
