@@ -1,0 +1,13 @@
+<div class="admin-content">
+  <h3>All Products</h3>
+  <% @products.each do |product| %>
+    <div class="admin-product">
+      <%= product.name %>
+      <%= link_to 'Show', admin_product_path(product) %>
+      <%= link_to 'Edit', edit_admin_product_path(product) %>
+      <%= link_to 'Destroy', admin_product_path(product), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  <% end %>
+
+  <%= link_to 'New Product', new_admin_product_path %>
+</div>

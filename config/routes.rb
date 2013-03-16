@@ -1,5 +1,8 @@
 Dress::Application.routes.draw do
   resources :products
+  namespace :admin do
+    resources :products
+  end
 
 
   get "/log_in" => "sessions#new", :as =>"log_in"

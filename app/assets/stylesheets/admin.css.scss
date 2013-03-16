@@ -1,0 +1,48 @@
+body,html{
+  height:100%;
+}
+.admin-header{
+	height: 20px;
+	padding: 10px 30px;
+	background-color: #333;
+	.logout{
+		color: #bbb;
+		float: right;
+		text-decoration: none;
+		font-size: 14px;
+		position: relative;
+		&:after{
+			font-family: 'admin-icons';
+			position: absolute;
+			content: '\e78e';
+			color: #888;
+			float: right;
+			text-decoration: none;
+			font-size: 13px;
+			left: 0;
+			margin: 2px 0 0 -16px;
+		}
+	}
+}
+.admin-menu{
+	width: 20%;
+	height: -webkit-calc(100% - 40px);
+	display: block;
+	background-color: #eee;
+	border-right: 1px solid #ccc;
+	float: left;
+	box-sizing: border-box;
+	padding: 30px 4%;
+	box-shadow: -1px 0 2px rgba(black, 0.1) inset;
+
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 13px;
+	font-weight: bold;
+}
+.admin-content{
+	box-sizing: border-box;
+	width: 80%;
+	padding: 26px 4%;
+	float: left;
+}
