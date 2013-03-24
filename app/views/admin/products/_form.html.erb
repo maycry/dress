@@ -19,3 +19,24 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<%= form_for @asset = Asset.new do |f| %>
+  <% if @asset.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@asset.errors.count, "error") %> prohibited this asset from being saved:</h2>
+
+      <ul>
+      <% @asset.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :image %><br />
+    <%= f.file_field :image, :multiple => true, :name => "asset[image]" %>
+  </div>
+<% end %>
+
+
