@@ -1,7 +1,4 @@
 Dress::Application.routes.draw do
-  resources :assets
-
-
   resources :products
   namespace :admin do
     resources :products
