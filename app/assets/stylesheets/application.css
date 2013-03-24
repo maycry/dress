@@ -11,4 +11,5 @@
  *= require reset
  *= require_self
  *= require_tree .
+ *= require typo
  */

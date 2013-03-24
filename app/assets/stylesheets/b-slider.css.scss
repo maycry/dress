@@ -1,0 +1,12 @@
+.b-slider.fotorama{
+	background-color: #f8f8f8;
+	height: 365px;
+	.promo{
+		position: absolute;
+		z-index: 2;
+		width: 30%;
+		left: 50%;
+		top: 74px;
+		margin-left: -415px;
+	}
+}

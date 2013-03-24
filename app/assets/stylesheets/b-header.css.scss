@@ -1,0 +1,33 @@
+@import "typo.css.scss";
+.b-header{
+	height: 84px;
+	.logo{
+		h1{
+			background: url(logo.png) 0 center no-repeat;
+			width: 171px;
+			height: 84px;
+			margin: 0 0;
+		}
+	}
+	.about-menu{
+		padding-top: 17px;
+		a{
+			font-size: 13px;
+			margin-right: 10px;
+		}
+	}
+	.products-menu{
+		padding-top: 10px;
+		a{
+			font-size: 14px;
+			margin-right: 10px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+	}
+	.phone{
+		padding-top: 34px;
+		float:right;
+		letter-spacing: 1px;
+	}
+}
