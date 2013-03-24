@@ -22,19 +22,16 @@ p{
 	font-size: 16px;
 	line-height: 24px;
 }
-a, a:visited, a:focus, a:active {
+a{
 	color: #1b95db;
 	text-decoration: none;
 	border-bottom: 1px rgba($blue, 0.5) solid;
 }
 a:hover{
 	color: $red;
-	border-bottom: 1px rgba($red, 0.5) solid !important;
-}
-@mixin black-link{
-	color: black;
-	border-bottom: 1px rgba(black, 0.3) solid;
+	border-bottom: 1px rgba($red, 0.5) solid;
 }
 .black-link{
-	@include black-link;
+	color: black;
+	border-bottom: 1px rgba(black, 0.3) solid;
 }

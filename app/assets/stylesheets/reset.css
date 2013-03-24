@@ -65,10 +65,7 @@ input, select, button, textarea {
 label, input[type="button"], input[type="submit"], button {
 	cursor: pointer;
 }
-a, a:visited, a:focus, a:active {
+a {
 	color: #1b95db;
 	text-decoration: underline;
-}
-a:hover {
-	color: red;
 }
