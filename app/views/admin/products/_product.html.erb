@@ -1,0 +1,7 @@
+<div class="b-product">
+	<%= link_to edit_admin_product_path(product) do %>
+		<%= image_tag product.attached_images.first.image.url(:thumb5) %>
+		<%= product.code %>
+	<% end %>
+	<%= content_tag :p, number_to_currency(product.price, :unit => "грн", :precision => 0, :delimiter => " ", :format => "%n %u"), :class => "price" %>
+</div>

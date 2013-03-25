@@ -1,0 +1,48 @@
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	width: 350px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	display: inline-block;
+	height: 20px;
+	padding: 4px 6px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #555555;
+	vertical-align: middle;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+label{
+	display: inline-block;
+	width: 160px;
+	text-align: right;
+	margin-right: 15px;
+	vertical-align: 5px;
+}
+.admin-content{
+	h1, h3, .images-control, .input_action{
+		padding-left: 175px;
+	}
+	h3{
+		margin-top: 24px;
+	}
+	form{
+		ol{
+			list-style: none;
+			li{
+				padding-top: 15px;
+			}
+		}
+	}
+	.input_action{
+		margin-top: 20px;
+		padding: 20px 0 20px 175px;
+		background-color: #ffc1ab;
+
+	}
+}
