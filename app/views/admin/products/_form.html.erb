@@ -1,10 +1,14 @@
-
 <%= semantic_form_for [:admin, @product], :html => {:multipart => true} do |f| %>
-  <%= f.inputs do %>
+  <%= f.inputs do%>
     <%= f.input :name %>
     <%= f.input :price %>
+    <%= file_field_tag 'product_attached_images_image', :multiple => true, :name => "product[attached_images_attributes][][image]" %>
+  <% end %>
+  <%= f.semantic_fields_for :attached_images do |ff|%>
+    <%= image_tag ff.object.image.url(:thumb5) %>
+    <%= ff.input :_destroy%>
   <% end %>
   <%= f.actions do %>
-    <%= f.action :submit, :as => :button %>
+    <%= f.action :submit %>
   <% end %>
 <% end %>
