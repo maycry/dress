@@ -1,3 +1,5 @@
 class Product < ActiveRecord::Base
-  attr_accessible :name
+	has_many :attached_images, :dependent => :destroy
+	accepts_nested_attributes_for :attached_images, :allow_destroy => true
+	attr_accessible :name, :attached_images_attributes
 end

@@ -3,8 +3,11 @@
 <p>
   <b>Name:</b>
   <%= @product.name %>
+  <% @product.attached_images.each do |photo| %>
+  	<%= image_tag photo.image.url(:thumb) %>
+  <% end %>
 </p>
 
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<%= link_to 'Edit', edit_admin_product_path(@product) %> |
+<%= link_to 'Back', admin_products_path %>
