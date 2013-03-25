@@ -4,7 +4,7 @@
   <b>Name:</b>
   <%= @product.name %>
   <% @product.attached_images.each do |photo| %>
-  	<%= image_tag photo.image.url(:thumb) %>
+  	<%= image_tag photo.image.url(:thumb5) %>
   <% end %>
 </p>
 
