@@ -11,7 +11,8 @@
 	  <%= content_tag :div, msg, :id => "flash-#{name}", :class => "flash-message" %>
 	<% end %>
 	<%= render 'admin/layouts/header' if is_loggedin %>
-	<%= render 'admin/layouts/menu' if is_loggedin %>
+	<%= render 'shared/b-header' %>
 	<%= yield %>
+	<%= render 'shared/b-footer' %>
 </body>
 </html>
