@@ -1,0 +1,28 @@
+.b-type-chooser{
+	padding-top: 28px;
+	text-align: center;
+
+	.chosen{
+		background-color: #333;
+		padding: 0 7px 2px;
+		border-radius: 5px;
+		pointer-events:none;
+		text-decoration: none;
+		color: white;
+		box-shadow: 0 1px 2px rgba(black, 1) inset;
+		position: relative;
+		&:before{
+			content: "";
+			position: absolute;
+			top:23px;
+			left: 50%;
+			margin-left: -8px;
+			z-index: 2;
+			width: 0; 
+			height: 0; 
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			border-top: 8px solid #333;
+		}	
+	}
+}

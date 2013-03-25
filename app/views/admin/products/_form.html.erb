@@ -16,11 +16,15 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
     <%= file_field_tag 'product_attached_images_image', :multiple => true, :name => "product[attached_images_attributes][][image]" %>
   </div>
 
   <%= f.fields_for :attached_images do |ff| %>
-    <%= image_tag ff.object.image.url(:thumb) %>
+    <%= image_tag ff.object.image.url(:thumb5) %>
     <%= ff.check_box :_destroy %>
   <% end %>
 
