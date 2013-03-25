@@ -4,7 +4,7 @@ $red: #e9167e;
 h1{
 	font-size: 32px;
 	line-height: 36px;
-	margin-bottom: 9px;
+	margin-bottom: 5px;
 }
 h2{
 	font-size: 24px;
@@ -15,25 +15,19 @@ h3{
 	font-size: 18px;
 	line-height: 26px;
 	margin-bottom: 16px;
-	font-weight: bold;
+	color: #666;
+	font-weight: normal;
 }
 p{
 	font-size: 16px;
 	line-height: 24px;
 }
 a{
-	color: $blue;
+	color: #1b95db;
 }
 a:hover{
 	color: $red;
 }
 .black-link{
 	color: black;
-}
-.pseudo-link{
-	text-decoration: none;
-	border-bottom: 1px dotted $blue;
-}
-.pseudo-link:hover{
-	border-bottom-color: $red;
 }

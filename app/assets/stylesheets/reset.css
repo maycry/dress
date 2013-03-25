@@ -7,8 +7,6 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, 
 	background: transparent;
 	font-size: 100%;
 	box-sizing: border-box;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
 }
 a {                                      	
 	margin:0;
