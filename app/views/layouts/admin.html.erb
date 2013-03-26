@@ -6,13 +6,13 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body class=<%= p("admin") if is_loggedin %>>
+<body>
 	<% flash.each do |name, msg| %>
 	  <%= content_tag :div, msg, :id => "flash-#{name}", :class => "flash-message" %>
 	<% end %>
 	<%= render 'admin/layouts/header' if is_loggedin %>
-	<%= render 'shared/b-header' %>
+	<%= render 'admin/layouts/menu' if is_loggedin %>
 	<%= yield %>
-	<%= render 'shared/b-footer' %>
+	<%= render 'admin/layouts/footer' if is_loggedin %>
 </body>
 </html>

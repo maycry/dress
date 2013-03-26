@@ -3,8 +3,7 @@ Dress::Application.routes.draw do
   namespace :admin do
     resources :products
   end
-
-
+  
   get "/log_in" => "sessions#new", :as =>"log_in"
   get "/log_out" => "sessions#destroy", :as =>"log_out"
   get "/test" => "sessions#test", :as => "test"

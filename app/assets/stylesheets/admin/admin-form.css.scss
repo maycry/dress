@@ -31,18 +31,25 @@ label{
 	h3{
 		margin-top: 24px;
 	}
-	form{
-		ol{
-			list-style: none;
-			li{
-				padding-top: 15px;
-			}
+	ol{
+		li{
+			padding-top: 15px;
 		}
 	}
 	.input_action{
 		margin-top: 20px;
 		padding: 20px 0 20px 175px;
 		background-color: #ffc1ab;
-
 	}
+	.images-control{
+		.image{
+			display: inline-block;
+		}
+		.destroy-checkbox label{
+			width: auto;
+			text-align: left;
+		}
+	}
+	
 }
+.admin-content form{ ol, li{ list-style: none;}}

@@ -7,14 +7,21 @@
 
   
   <h3>Images</h3>
-  <%= content_tag :div, :class => "images-control" do %>
+  <%= content_tag :div, :class => "images-control"  do %>
     <%= f.semantic_fields_for :attached_images do |ff|%>
-      <%= image_tag ff.object.image.url(:thumb5) %>
-      <%= ff.input :_destroy, :as => :boolean %>
-      
+      <%= content_tag :div, class: "image"  do %>
+        <%= image_tag ff.object.image.url(:thumb5) %>
+        <%= ff.input :_destroy, :as => :boolean, :wrapper_html => { :class => "destroy-checkbox" } %>
+      <% end %>
     <% end %>
   <% end %>
-  <%= file_field_tag 'product_attached_images_image', :multiple => true, :name => "product[attached_images_attributes][][image]" %>
+  <ol>
+  <li class="file input optional stringish" id="fileupload">
+    <%= label_tag "Upload files"%>
+    <%= file_field_tag 'product_attached_images_image', :multiple => true, :name => "product[attached_images_attributes][][image]", :id => "fileupload" %>
+  </li>
+  </ol>
+  
 
   <%= f.actions do %>
     <%= f.action :submit %>

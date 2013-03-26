@@ -1,4 +1,4 @@
-class Admin::ProductsController < ApplicationController
+class Admin::ProductsController < AdminController
   # GET /products
   # GET /products.json
   before_filter :authenticate
