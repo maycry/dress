@@ -1,0 +1,24 @@
+.b-product-about{
+	overflow: auto;
+	.look{
+		padding-right: 5%;
+		.photo{
+			background-color: #aaa;
+			height: 550px;
+			width: 100%;
+		}
+
+	}
+	.about{
+		.description{
+			padding-right: 20px;
+			p{
+				line-height: 22px;
+			}
+		}
+		.buy-wrapper{
+			height: 180px;
+			background-color: #dbc4bc;
+		}
+	}
+}
