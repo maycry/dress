@@ -1,0 +1,21 @@
+.b-review{
+	overflow: auto;
+	padding-top: 19px;
+	margin-bottom: 20px;
+	.review-image{
+		cursor: pointer;
+		height: 109px;
+		background: url(../review-1.jpg) center 0 no-repeat;
+	}
+	.review{
+		padding-left: 5%;
+		border: solid 2px #e3e3e3;
+		border-left: none;
+		height: 109px;
+		display: table;
+		span{
+		  vertical-align: middle;
+		  display: table-cell;
+		}
+	}
+}

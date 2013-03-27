@@ -1,0 +1,25 @@
+.b-taglines{
+	padding-top: 25px;
+	overflow: auto;
+	width: 100%;
+	padding-bottom: 25px;
+	.tagline{
+		padding-right: 22px;
+		i{
+			display: block;
+			width: 55px;
+			height: 55px;
+			background-color: #333;
+			margin-bottom: 8px;
+			-webkit-transition: all 1s;
+		}
+		.tagline-ico-1{background-image: url(../icons/mp-quality.png);}
+		.tagline-ico-2{background-image: url(../icons/mp-size.png);}
+		.tagline-ico-3{background-image: url(../icons/mp-date.png);}
+		.tagline-ico-4{background-image: url(../icons/mp-diamond.png);}
+		.tagline-ico-5{background-image: url(../icons/mp-blades.png);}
+	}
+	.tagline:hover i{background-color: #ff7fd9;}
+	
+	
+}
