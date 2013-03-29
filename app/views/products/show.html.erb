@@ -8,12 +8,13 @@
 	</div>
 	<div class="about col-1-2">
 		<h1>Платье алайн из шифона с длинным шлейфом</h1>
-		<p class="code">LB312304</p>
+		<p class="code"><%= @product.code %></p>
 		<div class="description col-1-2">
 			<p>Джинсы клеш с потёртостями. Классические передние карманы, задние карманы — накладные. Фурнитура медного цвета, ширинка на молнии, усиленный пояс на одной пуговице, с кожаным лейблом и прямыми петлями для ремня.</p>
 		</div>
 		<div class="buy-wrapper col-1-2">
-			
+			<%= return_price @product.price %>
+			<%= link_to "Заказать", "/", :class => "button sexy-button"  %>
 		</div>
-	</div>
 </section>
+<%= render 'shared/b-review' %>

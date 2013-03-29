@@ -1,5 +1,4 @@
-$blue: #1b95db;
-$red: #e9167e;
+@import "shared";
 
 h1{
 	font-size: 32px;
@@ -31,22 +30,22 @@ p.small, a.small{
 	line-height: 20px;
 }
 a{
-	color: $blue;
+	color: $link-color;
 	-webkit-transition: color .2s;
 }
 a:hover{
-	color: $red;
+	color: $hover-link-color;
 }
 .black-link{
 	color: black;
 }
 .gray-link{
-	color: #999;
+	color: $gray-link-color;
 }
 .pseudo-link{
 	text-decoration: none;
-	border-bottom: 1px dotted $blue;
+	border-bottom: 1px dotted $link-color;
 }
 .pseudo-link:hover{
-	border-bottom-color: $red;
+	border-bottom-color: $hover-link-color;
 }

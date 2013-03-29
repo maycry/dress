@@ -3,5 +3,5 @@
 		<%= image_tag product.attached_images.first.image.url(:thumb5) %>
 		<%= product.name %>
 	<% end %>
-	<%= content_tag :p, number_to_currency(product.price, :unit => "грн", :precision => 0, :delimiter => " ", :format => "%n %u"), :class => "price" %>
+	<%= return_price(product.price) %>
 </div>
