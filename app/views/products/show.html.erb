@@ -16,5 +16,9 @@
 			<%= return_price @product.price %>
 			<%= link_to "Заказать", "/", :class => "button sexy-button"  %>
 		</div>
+	</div>
+	<div class="col-1-2">
+		<%= render 'shared/b-taglines', :parent => "product-description" %>
+	</div>
 </section>
 <%= render 'shared/b-review' %>

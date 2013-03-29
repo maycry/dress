@@ -4,8 +4,10 @@
 	width: 100%;
 	padding-bottom: 25px;
 	.tagline{
+		float: left;
 		padding-right: 22px;
-		i{
+		.tagline-ico:before{
+			content:"";
 			display: block;
 			width: 55px;
 			height: 55px;
@@ -13,13 +15,28 @@
 			margin-bottom: 8px;
 			-webkit-transition: all 1s;
 		}
-		.tagline-ico-1{background-image: url(../icons/mp-quality.png);}
-		.tagline-ico-2{background-image: url(../icons/mp-size.png);}
-		.tagline-ico-3{background-image: url(../icons/mp-date.png);}
-		.tagline-ico-4{background-image: url(../icons/mp-diamond.png);}
-		.tagline-ico-5{background-image: url(../icons/mp-blades.png);}
+		.tagline-ico-quality:before{background-image: image_url("icons/mp-quality.png");}
+		.tagline-ico-size:before{background-image: image_url("icons/mp-size.png");}
+		.tagline-ico-date:before{background-image: image_url("icons/mp-date.png");}
+		.tagline-ico-diamond:before{background-image: image_url("icons/mp-diamond.png");}
+		.tagline-ico-blades:before{background-image: image_url("icons/mp-blades.png");}
 	}
-	.tagline:hover i{background-color: #ff7fd9;}
-	
-	
+	.tagline:hover .tagline-ico:before{background-color: #ff7fd9;}	
+}
+.b-taglines.home{
+	.tagline{
+		width: 20%;
+	}
+}
+.b-taglines.product-description{
+	.tagline{
+		width: 50%;
+		margin-bottom: 15px;
+		.tagline-ico:before{
+			content: none;
+		}
+		&:last-child{
+			display: none;
+		}
+	}
 }

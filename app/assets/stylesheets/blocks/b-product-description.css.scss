@@ -1,11 +1,12 @@
+@import "shared";
 .b-product-about{
+	padding-top: 10px;
 	overflow: auto;
 	.look{
-		padding-right: 5%;
 		.photo{
 			background-color: #aaa;
-			height: 550px;
-			width: 100%;
+			height: 570px;
+			width: 430px;
 		}
 	}
 	.about{
@@ -15,16 +16,22 @@
 				line-height: 22px;
 			}
 		}
+		.code{
+			color:$gray-link-color;
+			line-height: 10px;
+			margin-bottom: 15px;
+		}
 		.buy-wrapper{
 			height: 180px;
-			background-color: #ddcbb5;
-			border: solid 6px #c9b3a3;
-			box-shadow: 0 0 0 5px #ddcbb5 inset, 0 0 0 7px #c9b3a3 inset; 
-			padding: 20px;
+			background-color: $buy-wrapper-color;
+			border: solid 6px $buy-wrapper-d7color;
+			box-shadow: 0 0 0 5px $buy-wrapper-color inset, 0 0 0 7px $buy-wrapper-d7color inset; 
+			padding: 40px 20px;
+			text-align: center;
 			.price{
-				text-align: center;
 				font-size: 21px;
 				font-weight: bold;
+				padding-bottom: 10px;
 			}
 		}
 	}

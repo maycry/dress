@@ -1,3 +1,19 @@
+@import 'shared';
 .button{
-	
+	display: inline-block;
+	text-decoration: none;
+	border-radius: 3px;
+	background-color: #eee;
+	padding: 2px 6px;
+	color: #333;
+	font-weight: bold;
+}
+.sexy-button{
+	border: $buy-wrapper-d7color 1px solid;
+	box-shadow: 0 1px 0 rgba(darken($buy-wrapper-color, 20%), 1);
+	@include gradient($buy-wrapper-color, $buy-wrapper-d7color);
+	padding: 7px 20px;
+	color: darken($buy-wrapper-color, 70%);
+	text-shadow: 0 1px 0 rgba(white, 0.5);
+	font-size: 18px;
 }
