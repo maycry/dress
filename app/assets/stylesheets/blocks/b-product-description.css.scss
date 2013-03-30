@@ -1,12 +1,15 @@
 @import "shared";
 .b-product-about{
 	padding-top: 10px;
-	overflow: auto;
+	overflow: hidden;
 	.look{
 		.photo{
 			background-color: #aaa;
 			height: 570px;
 			width: 430px;
+			img{
+				max-width: 100%;
+			}
 		}
 	}
 	.about{

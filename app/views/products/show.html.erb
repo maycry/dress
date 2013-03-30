@@ -2,7 +2,7 @@
 	<div class="look col-1-2">
 		<div class="look">
 			<div class="photo">
-				
+				<%= image_tag @product.attached_images.first.image.url(:original) %>
 			</div>
 		</div>
 	</div>

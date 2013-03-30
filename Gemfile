@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "1.9.2"
+ruby "1.9.3"
 
 gem 'rails', '3.2.12'
 
@@ -23,6 +23,7 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'thin'
 end
 
 gem 'jquery-rails'
