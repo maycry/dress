@@ -5,7 +5,7 @@ body.admin{
 	height: 84px;
 	.logo{
 		h1{
-			background: #333 url(../logo.png) 0 center no-repeat;
+			background: #333 image_url("logo.png") 0 center no-repeat;
 			width: 171px;
 			height: 84px;
 			margin: 0 0;
