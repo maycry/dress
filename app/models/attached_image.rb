@@ -8,18 +8,8 @@ class AttachedImage < ActiveRecord::Base
 					:thumb3 => "322x431#", 
 					:thumb_small => "60x80#"}, 
 		:url  => "/products/:product_id/:style/:basename.:extension",
-		:path => ":rails_root/public/products/:product_id/:style/:basename.:extension"
+		:path => "/products/:product_id/:style/:basename.:extension",
+		:storage => :s3,
+	    :s3_credentials => S3_CREDENTIALS
 	attr_accessible :image, :image_file_name
-
-	def self.width
-	  open(self.first.image.url, "rb") do |fh|
-	  	ImageSize.new(fh.read).w
-	  end
-	end
-	
-	def self.height
-	  open(self.first.image.url, "rb") do |fh|
-	    ImageSize.new(fh.read).h
-	  end
-	end
 end
