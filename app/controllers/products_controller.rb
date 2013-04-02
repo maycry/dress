@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @products = Product.limit(5)
     @product = Product.find(params[:id])
 
     respond_to do |format|

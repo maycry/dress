@@ -4,6 +4,12 @@
 	width: 100%;
 	padding-bottom: 25px;
 	.tagline{
+		ul{
+			li{
+				font-size: 13px;
+				padding-bottom: 10px;
+			}
+		}
 		float: left;
 		padding-right: 22px;
 		.tagline-ico:before{
@@ -27,16 +33,47 @@
 	.tagline{
 		width: 20%;
 	}
+	.no-on-home{
+		display: none;
+	}
 }
 .b-taglines.product-description{
 	.tagline{
 		width: 50%;
-		margin-bottom: 15px;
+		margin-bottom: 5px;
 		.tagline-ico:before{
 			content: none;
 		}
 		&:last-child{
 			display: none;
+		}
+	}
+	.quality{
+		display: block;
+		.samples{
+			padding-top: 10px;
+			.sample-item{
+				display: inline-block;
+				width: 30%;
+				height: 65px;
+				background-color: #aaa;
+				margin-right: 2%;
+				border: 5px solid #ccc;
+				position: relative;
+				&.video:after{
+					content: "";
+					position: absolute;
+					width: 41px;
+					height: 41px;
+					background: image_url("video.png");
+					left: 50%;
+					margin-left: -20px;
+					margin-top: 7px;
+				}
+			}
+			.sample-item:last-child{
+				margin-right: none;
+			}
 		}
 	}
 }

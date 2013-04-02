@@ -1,4 +1,9 @@
 @import 'shared';
+$btnc1: #caa573;
+$btnc2: #b68a52;
+$btnc3: #d3b987;
+$btncs: #a17e51;
+$btnc : #fff1de;
 .button{
 	display: inline-block;
 	text-decoration: none;
@@ -9,11 +14,21 @@
 	font-weight: bold;
 }
 .sexy-button{
-	border: $buy-wrapper-d7color 1px solid;
-	box-shadow: 0 1px 0 rgba(darken($buy-wrapper-color, 20%), 1);
-	@include gradient($buy-wrapper-color, $buy-wrapper-d7color);
-	padding: 7px 20px;
-	color: darken($buy-wrapper-color, 70%);
-	text-shadow: 0 1px 0 rgba(white, 0.5);
+	border: darken($btnc3, 7%) 1px solid;
+	box-shadow: 0 1px 0 rgba($btncs, 1);
+	@include gradient3($btnc3, $btnc2, $btnc1);
+	padding: 7px 30px;
+	color: $btnc;
+	text-shadow: 0 1px 0 rgba(darken($btncs,10%), 1);
 	font-size: 18px;
 }
+.sexy-button:hover{
+	color: white;
+	@include gradient3(lighten($btnc3,2%), lighten($btnc2,1%), lighten($btnc1,3%));
+}
+.sexy-button:active{
+	color: darken($btnc, 5%);
+	@include gradient(darken($btnc2, 10%), lighten($btnc2,5%));
+	-webkit-transition: none;
+}
+

@@ -1,5 +1,5 @@
 class StaticController < ApplicationController
 	def home
-		@products = Product.all
+		@products = Product.limit(5)
 	end
 end

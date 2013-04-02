@@ -1,9 +1,24 @@
 <section class="b-product-about">
 	<div class="look col-1-2">
-		<div class="look">
-			<div class="photo">
-				<%= image_tag @product.attached_images.first.image.url(:original) %>
+		<div class="photo">
+			<div class="zoom"></div>
+			<%= image_tag @product.attached_images.first.image.url, data: {width: "1200", height: "600"} %>
+		</div>
+		<div class="thumbs">
+			<div class="original">
+				<% @product.attached_images.each do |ai| %>
+					<div class="thumb">
+						<%= image_tag ai.image.url(:thumb_small), data: {width: "1200", height: "600", original: ai.image.url} %>
+					</div>
+				<% end %>
+				<p>Оригинальные фото</p>
 			</div>
+			<!-- <div class="replica">
+				<div class="thumb"></div>
+				<div class="thumb"></div>
+				<div class="thumb"></div>
+				<p>Фото реплик</p>
+			</div> -->
 		</div>
 	</div>
 	<div class="about col-1-2">
@@ -22,3 +37,7 @@
 	</div>
 </section>
 <%= render 'shared/b-review' %>
+<h4 class="products-header">Похожие платья</h4>
+<section class="products-list">
+	<%= render @products %>
+</section>

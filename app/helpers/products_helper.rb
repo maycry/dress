@@ -11,4 +11,5 @@ module ProductsHelper
 		price += " грн"
 		content_tag :p, price, :class => "price"
 	end
+
 end

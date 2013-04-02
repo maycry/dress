@@ -5,20 +5,19 @@ $buy-wrapper-color: #ddcbb5;
 $buy-wrapper-d7color: darken($buy-wrapper-color, 7%);
 
 @mixin gradient($from, $to) {
-  /* fallback/image non-cover color */
   background-color: $from;
- 
-  /* Firefox 3.6+ */
   background: -moz-linear-gradient($from, $to);
- 
-  /* Safari 4+, Chrome 1+ */
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
- 
-  /* Safari 5.1+, Chrome 10+ */
   background: -webkit-linear-gradient($from, $to);
   background: -webkit-linear-gradient(top, $from 0%,$to 100%);
-
- 
-  /* Opera 11.10+ */
   background: -o-linear-gradient($from, $to);
+}
+@mixin gradient3($c1, $c2, $c3) {
+  background: $c2;
+  background: -moz-linear-gradient(top,  $c1 0%, $c2 70%, $c3 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$c1), color-stop(70%,$c2), color-stop(100%,$c3));
+  background: -webkit-linear-gradient(top,  $c1 0%,$c2 70%,$c3 100%);
+  background: -o-linear-gradient(top,  $c1 0%,$c2 70%,$c3 100%);
+  background: -ms-linear-gradient(top,  $c1 0%,$c2 70%,$c3 100%);
+  background: linear-gradient(to bottom,  $c1 0%,$c2 70%,$c3 100%);
 }

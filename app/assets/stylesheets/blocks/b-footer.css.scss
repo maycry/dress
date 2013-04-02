@@ -9,6 +9,9 @@
 		list-style: none;
 		li{
 			display: inline-block;
+			&:before{
+				content: none;
+			}
 		}
 	}
 	ul li.point:after{

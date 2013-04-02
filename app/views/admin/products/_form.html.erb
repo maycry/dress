@@ -18,10 +18,9 @@
   <ol>
   <li class="file input optional stringish" id="fileupload">
     <%= label_tag "Upload files"%>
-    <%= file_field_tag 'product_attached_images_image', :multiple => true, :name => "product[attached_images_attributes][][image]", :id => "fileupload" %>
+    <%= file_field_tag 'product_attached_images_imag', :multiple => true, :name => "product[attached_images_attributes][][image]", :id => "fileupload" %>
   </li>
   </ol>
-  
 
   <%= f.actions do %>
     <%= f.action :submit %>

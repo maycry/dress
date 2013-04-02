@@ -28,10 +28,21 @@ p{
 p.small, a.small{
 	font-size: 14px;
 	line-height: 20px;
+	padding-bottom: 10px;
 }
+ul{
+	li{
+		list-style: none;
+		&:before{
+			content:"—";
+			display: inline;
+			margin-right: 0.313em;
+		}
+	}
+}
+
 a{
 	color: $link-color;
-	-webkit-transition: color .2s;
 }
 a:hover{
 	color: $hover-link-color;
