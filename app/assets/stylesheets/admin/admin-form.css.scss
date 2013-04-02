@@ -17,6 +17,12 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 	-moz-border-radius: 4px;
 	border-radius: 4px;
 }
+.select *{
+	vertical-align: 5px;
+}
+select{
+	margin-right: 5px;
+}
 label{
 	display: inline-block;
 	width: 160px;

@@ -3,6 +3,10 @@
     <%= f.input :name %>
     <%= f.input :price, :as => :string %>
     <%= f.input :code %>
+    <%= f.input :type_id,   :as => :select,  :collection => Type.find(:all) %>
+    <%= f.semantic_fields_for :type_attributes do |ff|%>
+      <%= ff.input :name, :wrapper_html => { :class => "hide" }%>
+    <% end %>
   <% end %>
 
   
