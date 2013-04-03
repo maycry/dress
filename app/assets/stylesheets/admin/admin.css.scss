@@ -41,9 +41,14 @@ body,html{
 		color: #bbb;
 		float: right;
 		text-decoration: none;
-		font-size: 14px;
+		font-size: 12px;
 		font-weight: bold;
 		position: relative;
+		margin-right: -5px;
+		margin-top: 2px;
+		&:hover{
+			color: white;
+		}
 	}
 }
 .admin-content{
@@ -52,6 +57,39 @@ body,html{
 	width: 100%;
 	.b-product{
 		width: 129px;
+		&:nth-child(5n){
+			margin: 15px 19px 0 0;
+		}
+	}
+	.add-product{
+		width: 89px;
+		height: 142px;
+		border: 3px dashed #ddd;
+		float: left;
+		margin-top: 15px;
+		margin-right: 19px;
+		text-align: center;
+		font-size: 18px;
+		padding: 25px 20px 0;
+		font-weight: bold;
+		color: #aaa;
+		display: block;
+		text-decoration: none;
+		&:before{
+			content: "+";
+			display: block;
+			font-size: 64px;
+			font-weight: bold;
+			line-height: 52px;
+			color: #ddd;
+		}
+		&:hover{
+			color: $hover-link-color;
+			border-color: $hover-link-color;
+		}
+		&:hover:before{
+			color: $hover-link-color;
+		}
 	}
 }
 .admin-footer{
