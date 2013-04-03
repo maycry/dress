@@ -1,6 +1,12 @@
 <div class="admin-content">
+	<%= link_to "Add style", new_admin_style_path, class: "add-product" %>
 	<% @styles.each do |style| %>
-		<%= link_to style.name, edit_admin_style_path(style) %>
+		<div class="b-product">
+			<%= link_to edit_admin_style_path(style) do %>
+				<%= image_tag style.image.url(:thumb7) %>
+				<%= style.name %>
+			<% end %>
+		</div>
 	<% end %>
 </div>
 

@@ -57,7 +57,7 @@ class Admin::StylesController < AdminController
   # PUT /styles/1
   # PUT /styles/1.json
   def update
-    @style = style.find(params[:id])
+    @style = Style.find(params[:id])
 
     respond_to do |format|
       if @style.update_attributes(params[:style])

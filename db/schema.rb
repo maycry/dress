@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130403113406) do
+ActiveRecord::Schema.define(:version => 20130403203918) do
 
   create_table "attached_images", :force => true do |t|
     t.datetime "created_at",         :null => false
@@ -23,6 +23,14 @@ ActiveRecord::Schema.define(:version => 20130403113406) do
     t.integer  "product_id"
   end
 
+  create_table "designers", :force => true do |t|
+    t.string   "name"
+    t.string   "alias"
+    t.integer  "order"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "products", :force => true do |t|
     t.string   "name"
     t.datetime "created_at",                  :null => false
@@ -30,14 +38,19 @@ ActiveRecord::Schema.define(:version => 20130403113406) do
     t.decimal  "price",      :default => 0.0
     t.string   "code"
     t.integer  "type_id"
+    t.integer  "style_id"
   end
 
   create_table "styles", :force => true do |t|
     t.string   "name"
     t.string   "alias"
     t.integer  "order"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "types", :force => true do |t|

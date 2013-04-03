@@ -1,0 +1,12 @@
+<div class="admin-content">
+	<%= link_to "Add designer", new_admin_designer_path, class: "add-type" %>
+	<table>
+		<tbody>
+			<% @designers.each do |designer| %>
+				<tr><td><%= link_to designer.name, edit_admin_designer_path(designer) %></td></tr>
+			<% end %>
+		</tbody>
+	</table>
+		
+</div>
+

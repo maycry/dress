@@ -1,7 +1,8 @@
 class AttachedImage < ActiveRecord::Base
 	belongs_to :product
 	has_attached_file :image, 
-		:styles => {:thumb7 => "129x172#", 
+		:styles => {:thumb8 => "111x148#", 
+					:thumb7 => "129x172#", 
 					:thumb6 => "153x204#", 
 					:thumb5 => "188x251#", 
 					:thumb4 => "238x318#", 

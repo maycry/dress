@@ -91,6 +91,35 @@ body,html{
 			color: $hover-link-color;
 		}
 	}
+	.add-type{
+		height: 30px;
+		border: 3px dashed #ddd;
+		margin-right: 19px;
+		text-align: center;
+		font-size: 16px;
+		padding: 1px 20px;
+		font-weight: bold;
+		color: #aaa;
+		display: inline-block;
+		text-decoration: none;
+		margin-bottom: 10px;
+		&:before{
+			content: "+";
+			font-size: 28px;
+			font-weight: bold;
+			line-height: 28px;
+			vertical-align: -2px;
+			margin-right: 5px;
+			color: #ddd;
+		}
+		&:hover{
+			color: $hover-link-color;
+			border-color: $hover-link-color;
+		}
+		&:hover:before{
+			color: $hover-link-color;
+		}
+	}
 }
 .admin-footer{
 	width: 100%;
@@ -103,4 +132,12 @@ body,html{
 	text-decoration: none;
 	color: #ddd;
 	background: -webkit-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+}
+table{
+	width: 100%;
+	tr{
+		td{
+			padding: 10px 0;
+		}
+	}
 }

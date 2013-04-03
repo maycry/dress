@@ -1,0 +1,12 @@
+<div class="admin-content">
+	<%= link_to "Add type", new_admin_type_path, class: "add-type" %>
+	<table>
+		<tbody>
+			<% @types.each do |type| %>
+				<tr><td><%= link_to type.name, edit_admin_type_path(type) %></td></tr>
+			<% end %>
+		</tbody>
+	</table>
+		
+</div>
+

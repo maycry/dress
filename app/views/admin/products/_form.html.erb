@@ -3,7 +3,8 @@
     <%= f.input :name %>
     <%= f.input :price, :as => :string %>
     <%= f.input :code %>
-    <%= f.input :type_id,   :as => :select,  :collection => Type.find(:all) %>
+    <%= f.input :type_id,   :as => :select,  :collection => Type.find(:all), :include_blank => false %>
+    <%= f.input :style_id,   :as => :select,  :collection => Style.find(:all), :include_blank => false %>
   <% end %>
 
   

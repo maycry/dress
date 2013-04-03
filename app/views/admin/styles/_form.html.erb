@@ -2,8 +2,16 @@
   <%= f.inputs do%>
     <%= f.input :name %>
     <%= f.input :alias, :as => :string %>
+    <%= f.input  :image %>
   <% end %>
-  
+
+  <% if !@style.image.blank? %>
+  	<h3>Images</h3>
+  	<%= content_tag :div, :class => "images-control"  do %>
+		<%= image_tag @style.image.url(:thumb_small) %>
+  	<% end %>
+  <% end %>
+
   <%= f.actions do %>
     <%= f.action :submit %>
   <% end %>
