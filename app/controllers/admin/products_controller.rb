@@ -1,7 +1,6 @@
 class Admin::ProductsController < AdminController
   # GET /products
   # GET /products.json
-  before_filter :authenticate
 
   def index
     @products = Product.all
@@ -81,12 +80,6 @@ class Admin::ProductsController < AdminController
     respond_to do |format|
       format.html { redirect_to admin_products_path }
       format.json { head :no_content }
-    end
-  end
-  def authenticate
-    unless session[:log_in]
-      flash[:error] = "You must be logged in to access this section"
-      redirect_to log_in_path # halts request cycle
     end
   end
 end

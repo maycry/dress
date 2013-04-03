@@ -1,0 +1,6 @@
+<div class="admin-content">
+	<% @styles.each do |style| %>
+		<%= link_to style.name, edit_admin_style_path(style) %>
+	<% end %>
+</div>
+

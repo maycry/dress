@@ -1,6 +1,9 @@
 <header class="admin-header">
-	<div class="col-1-5">
-		<%= link_to "Add new product", new_admin_product_path, :class => "black-button"  %>
-	</div>
-	<%= link_to("Log out", log_out_path, :class => "logout icon-off") %>
+	<nav class="col-3-5 menu">
+
+		<%= nav_link "←", root_url %>
+		<%= nav_link "Products",  admin_products_url %>
+		<%= nav_link "Styles",  admin_styles_url %>
+	</nav>
+	<%= link_to("", log_out_path, :class => "logout icon-off") %>
 </header>

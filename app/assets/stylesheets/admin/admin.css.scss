@@ -1,3 +1,5 @@
+@import "shared";
+
 body,html{
   height:100%;
 }
@@ -9,6 +11,32 @@ body,html{
 	background-color: #333;
 	top: 0;
 	z-index: 3;
+	.menu{
+		margin-left: -10px;
+		div{
+			display: inline-block;
+			a{
+				color: #bbb;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-size: 13px;
+				line-height: 20px;
+				padding: 3px 10px;
+				letter-spacing: 1px;
+				font-weight: bold;
+			}
+			&.current a{
+				pointer-events: none;
+				background-color: #222;
+				color: #999;
+				border-radius: 10px;
+				box-shadow: 0 1px 2px rgba(black, 0.8) inset, 0 1px 0 rgba(white, 0.1);
+			}
+		}
+		a:hover{
+			color: white;
+		}
+	}
 	.logout{
 		color: #bbb;
 		float: right;
@@ -18,27 +46,13 @@ body,html{
 		position: relative;
 	}
 }
-.admin-menu{
-	position: fixed;
-	margin-top:40px;
-	height: -webkit-calc(100% - 40px);
-	display: block;
-	background-color: #eee;
-	border-right: 1px solid #ccc;
-	float: left;
-	box-sizing: border-box;
-	padding: 30px 4%;
-	box-shadow: -1px 0 2px rgba(black, 0.1) inset;
-
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-size: 13px;
-	font-weight: bold;
-}
 .admin-content{
 	box-sizing: border-box;
-	padding: 66px 4% 0 24%;
+	padding: 66px 4% 0 4%;
 	width: 100%;
+	.b-product{
+		width: 129px;
+	}
 }
 .admin-footer{
 	width: 100%;
