@@ -17,7 +17,7 @@ class Admin::DesignersController < AdminController
     @designer = Designer.find(params[:id])
 
     respond_to do |format|
-      format.html { render html: admin_style_path(@designer)}
+      format.html { render html: admin_designer_path(@designer)}
       format.json { render json: @designer }
     end
   end
@@ -61,7 +61,7 @@ class Admin::DesignersController < AdminController
 
     respond_to do |format|
       if @designer.update_attributes(params[:designer])
-        format.html { redirect_to admin_designer_path, notice: 'designer was successfully updated.' }
+        format.html { redirect_to admin_designers_path, notice: 'designer was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -77,7 +77,7 @@ class Admin::DesignersController < AdminController
     @designer.destroy
 
     respond_to do |format|
-      format.html { redirect_to admin_designer_path }
+      format.html { redirect_to admin_designers_path }
       format.json { head :no_content }
     end
   end

@@ -3,7 +3,7 @@
 	<table>
 		<tbody>
 			<% @designers.each do |designer| %>
-				<tr><td><%= link_to designer.name, edit_admin_designer_path(designer) %></td></tr>
+				<tr><td><%= link_to "×", admin_designer_path(designer), :confirm => "Are you sure you want to delete #{designer.name}?", :method => :delete, :class => "delete" %><%= link_to designer.name, edit_admin_designer_path(designer) %></td></tr>
 			<% end %>
 		</tbody>
 	</table>
