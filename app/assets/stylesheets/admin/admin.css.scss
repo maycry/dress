@@ -57,6 +57,19 @@ body,html{
 	width: 100%;
 	.b-product{
 		width: 129px;
+		.delete{
+			position: absolute;
+			text-decoration: none;
+			font-size: 18px;
+			font-weight: bold;
+			color: white;
+			padding: 0 5px;
+			background-color: rgba(black, 0.1);
+			&:hover{
+				background-color: rgba(black, 0.2);
+				color: $hover-link-color;
+			}
+		}
 		&:nth-child(5n){
 			margin: 15px 19px 0 0;
 		}
@@ -138,6 +151,26 @@ table{
 	tr{
 		td{
 			padding: 10px 0;
+			.delete{
+				position: absolute;
+				text-decoration: none;
+				font-size: 18px;
+				font-weight: bold;
+				color: white;
+				padding: 0 5px;
+				margin-left: -25px;
+				line-height: 19px;
+				background-color: rgba(black, 0.1);
+				&:hover{
+					background-color: rgba(black, 0.2);
+					color: $hover-link-color;
+			}
+		}
 		}
 	}
 }
+.input_action{
+	.submit{
+		display: inline-block;
+	}
+} 

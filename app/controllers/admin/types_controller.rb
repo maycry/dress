@@ -17,7 +17,7 @@ class Admin::TypesController < AdminController
     @type = Type.find(params[:id])
 
     respond_to do |format|
-      format.html { render html: admin_style_path(@type)}
+      format.html { render html: admin_type_path(@type)}
       format.json { render json: @type }
     end
   end
@@ -45,7 +45,7 @@ class Admin::TypesController < AdminController
 
     respond_to do |format|
       if @type.save
-        format.html { redirect_to admin_type_path, notice: 'Type was successfully created.' }
+        format.html { redirect_to admin_types_path, notice: 'Type was successfully created.' }
         format.json { render json: @type, status: :created, location: @type }
       else
         format.html { render action: "new" }
@@ -61,7 +61,7 @@ class Admin::TypesController < AdminController
 
     respond_to do |format|
       if @type.update_attributes(params[:type])
-        format.html { redirect_to admin_type_path, notice: 'Type was successfully updated.' }
+        format.html { redirect_to admin_types_path, notice: 'Type was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -73,11 +73,11 @@ class Admin::TypesController < AdminController
   # DELETE /type/1
   # DELETE /type/1.json
   def destroy
-    @type = type.find(params[:id])
+    @type = Type.find(params[:id])
     @type.destroy
 
     respond_to do |format|
-      format.html { redirect_to admin_type_path }
+      format.html { redirect_to admin_types_path }
       format.json { head :no_content }
     end
   end

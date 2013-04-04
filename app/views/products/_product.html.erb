@@ -1,6 +1,6 @@
 <div class="b-product">
 	<%= link_to product_path(product) do %>
-		<%= image_tag product.attached_images.first.image.url(:thumb5) %>
+		<%= image_tag product.attached_images.first.image.url(:thumb5)  unless product.attached_images.first.nil? %>
 		<%= product.name %>
 	<% end %>
 	<%= return_price(product.price) %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130403203918) do
+ActiveRecord::Schema.define(:version => 20130404202018) do
 
   create_table "attached_images", :force => true do |t|
     t.datetime "created_at",         :null => false
@@ -33,12 +33,13 @@ ActiveRecord::Schema.define(:version => 20130403203918) do
 
   create_table "products", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
-    t.decimal  "price",      :default => 0.0
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.decimal  "price",       :default => 0.0
     t.string   "code"
     t.integer  "type_id"
     t.integer  "style_id"
+    t.integer  "designer_id"
   end
 
   create_table "styles", :force => true do |t|

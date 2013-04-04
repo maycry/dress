@@ -1,18 +1,12 @@
 <%= semantic_form_for [:admin, @style], :html => {:multipart => true} do |f| %>
-  <%= f.inputs do%>
-    <%= f.input :name %>
-    <%= f.input :alias, :as => :string %>
-    <%= f.input  :image %>
-  <% end %>
+  <%= f.inputs :name, :alias, :image%>
 
   <% if !@style.image.blank? %>
-  	<h3>Images</h3>
+  	<h3>Image</h3>
   	<%= content_tag :div, :class => "images-control"  do %>
-		<%= image_tag @style.image.url(:thumb_small) %>
+		<%= image_tag @style.image.url(:thumb7) %>
   	<% end %>
   <% end %>
 
-  <%= f.actions do %>
-    <%= f.action :submit %>
-  <% end %>
+  <%= f.actions%>
 <% end %>

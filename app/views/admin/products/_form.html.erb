@@ -3,8 +3,9 @@
     <%= f.input :name %>
     <%= f.input :price, :as => :string %>
     <%= f.input :code %>
-    <%= f.input :type_id,   :as => :select,  :collection => Type.find(:all), :include_blank => false %>
-    <%= f.input :style_id,   :as => :select,  :collection => Style.find(:all), :include_blank => false %>
+    <%= f.input :type_id,       :as => :select,  :collection => Type.find(:all), :include_blank => false %>
+    <%= f.input :style_id,      :as => :select,  :collection => Style.find(:all), :include_blank => false %>
+    <%= f.input :designer_id,   :as => :select,  :collection => Designer.find(:all), :include_blank => false %>
   <% end %>
 
   
@@ -24,7 +25,5 @@
   </li>
   </ol>
 
-  <%= f.actions do %>
-    <%= f.action :submit %>
-  <% end %>
+  <%= f.actions %>
 <% end %>
