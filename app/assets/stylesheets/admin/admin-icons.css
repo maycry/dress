@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'admin-icons';
-  src: url("../font/admin-icons.eot?79279793");
-  src: url("../font/admin-icons.eot?79279793#iefix") format('embedded-opentype'), 
-  url("../font/admin-icons.woff?79279793") format('woff'), 
-  url("../font/admin-icons.ttf?79279793") format('truetype'), 
-  url("../font/admin-icons.svg?79279793#admin-icons") format('svg');
+  src: url("../application/font/admin-icons.eot?79279793");
+  src: url("../application/font/admin-icons.eot?79279793#iefix") format('embedded-opentype'), 
+  url("../application/font/admin-icons.woff?79279793") format('woff'), 
+  url("../application/font/admin-icons.ttf?79279793") format('truetype'), 
+  url("../application/font/admin-icons.svg?79279793#admin-icons") format('svg');
   font-weight: normal;
   font-style: normal;
 }

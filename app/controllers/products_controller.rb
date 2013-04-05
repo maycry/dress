@@ -2,6 +2,8 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @designers = Designer.all
+    @styles = Style.all
 
     respond_to do |format|
       format.html 

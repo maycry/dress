@@ -1,0 +1,20 @@
+.b-categories{
+	overflow: auto;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	h4{
+		margin-bottom: 8px;
+	}
+	ul{
+		li{
+			display: inline-block;
+			margin-right: 10px;
+			font-size: 14px;
+			line-height: 24px;
+			&:before{
+				content:"";
+				margin-right: 0;
+			}
+		}
+	}
+}

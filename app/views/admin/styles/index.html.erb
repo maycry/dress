@@ -1,13 +1,13 @@
 <div class="admin-content">
-	<%= link_to "Add style", new_admin_style_path, class: "add-product" %>
-	<% @styles.each do |style| %>
-		<div class="b-product">
-			<%= link_to "×", admin_style_path(style), :confirm => "Are you sure you want to delete #{style.name}?", :method => :delete, :class => "delete" %>
-			<%= link_to edit_admin_style_path(style) do %>
-				<%= image_tag style.image.url(:thumb7) %>
-				<%= style.name %>
+	<%= link_to "Add style", new_admin_style_path, class: "add-type" %>
+	<table>
+		<tbody>
+			<% @styles.each do |style| %>
+				<tr><td><%= link_to "×", admin_style_path(style), :confirm => "Are you sure you want to delete #{style.name}?", :method => :delete, :class => "delete" %><%= link_to style.name, edit_admin_style_path(style) %></td></tr>
 			<% end %>
-		</div>
-	<% end %>
+		</tbody>
+	</table>
 </div>
+
+
 

@@ -12,5 +12,6 @@
  *= require application/tools
  *= require_self
  *= require_tree ./application
+ *= require_tree ./admin
  *= require application/typo
  */

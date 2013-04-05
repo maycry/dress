@@ -1,7 +1,35 @@
-<table>
-<% @products.each do |product| %>
-  <tr>
-    <td><%= product.name %></td>
-  </tr>
-<% end %>
-</table>
+<section class="tizers">
+	<div class="col-1-2 tizer">
+		<div class="module">
+			<div class="col-1-3 image image-pregnat">
+			</div>
+			<div class="col-2-3 description">
+				<h3>Платья для беременных</h3>
+				<p>Подборка платьев с высокой талией для беременных.</p>
+				<br />
+				<p><strong>3500 грн</strong></p>
+			</div>
+		</div>
+	</div>
+	<div class="col-1-2 tizer">
+		<div class="module">
+			<div class="col-1-3 image image-pregnat">
+			</div>
+			<div class="col-2-3 description">
+				<h3>Платья для беременных</h3>
+				<p>Подборка платьев с высокой талией для беременных.</p>
+				<br />
+				<p><strong>3500 грн</strong></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="b-categories">
+	<%= render 'categories', category_name: "Дизайнеры", list: @designers %>
+	<%= render 'categories', category_name: "Фасоны", list: @styles %>
+</section>
+<section class="products-list">
+	<%= render @products %>
+	<%= render 'shared/b-nexter', :text => "Выбрать свадебное платье" %>
+</section>
