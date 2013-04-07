@@ -4,11 +4,14 @@ Dress::Application.routes.draw do
     resources :products, :types, :styles, :designers
   end
   
-  get "/log_in" => "sessions#new", :as =>"log_in"
-  get "/log_out" => "sessions#destroy", :as =>"log_out"
-  get "/test" => "sessions#test", :as => "test"
+  get "log_in" => "sessions#new", :as =>"log_in"
+  get "log_out" => "sessions#destroy", :as =>"log_out"
+  get ":type_alias/all" => "products#index", :as => :products
+  get ":type_alias/dizainer/:designer_alias" => "products#index", :as => :products_designers
+  get ":type_alias/fason/:style_alias" => "products#index", :as => :products_styles
   resources :sessions
 
+  get 'quality' => 'pages#quality'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -58,8 +61,7 @@ Dress::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'static#home'
-  match ':action' => 'static#:action'
+  root :to => 'products#home'
 
   # See how all your routes lay out with "rake routes"
 

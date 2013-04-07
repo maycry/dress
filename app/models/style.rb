@@ -1,6 +1,6 @@
 class Style < ActiveRecord::Base
   attr_accessible :alias, :name, :order, :image
-  has_many :styles
+  has_many :products
   before_save :add_alias
   has_attached_file :image, 
   	:styles => {:thumb8 => "111x148#", 

@@ -13,9 +13,9 @@
 				<a class="black-link" href="/contacts">Контакты</a>
 			</nav>
 			<nav class="products-menu">
-				<a class="black-link" href="/wedding-dresses">Свадебные платья</a>
-				<a class="black-link" href="/evening-dresses">Вечерние платья</a>
-				<a class="black-link" href="/accesorize">Аксессуары</a>
+				<% @types.each do |s| %>
+					<%= link_to s.name, products_path(s.alias), class: "black-link" %>
+				<% end %>
 			</nav>
 		</div>
 		<div class="col-1-4">

@@ -26,6 +26,8 @@ class Admin::ProductsController < AdminController
   # GET /products/new.json
   def new
     @product = Product.new
+    @product.style = Style.first
+    @product.designer = Designer.first
 
     respond_to do |format|
       format.html { render }
