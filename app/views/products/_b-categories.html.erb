@@ -4,7 +4,7 @@
 		<h4>Дизайнеры</h4>
 		<ul>
 			<% designers.each do |designer| %>
-				<li><%= link_to designer.name, products_designers_path(params[:type_alias], designer.alias)  %></li>
+				<li><%= link_to designer.name, type_designer_url(type, designer)  %></li>
 			<% end %>    
 		</ul>
 	</div>
@@ -14,7 +14,7 @@
 		<h4>Фасоны</h4>
 		<ul>
 			<% styles.each do |style| %>
-				<li><%= link_to style.name, products_styles_path(params[:type_alias], style.alias)  %></li>
+				<li><%= link_to style.name, type_style_url(type, style)  %></li>
 			<% end %>    
 		</ul>
 	</div>

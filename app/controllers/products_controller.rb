@@ -29,9 +29,5 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @types = Type.all
 
-    respond_to do |format|
-      format.html
-      format.json { render json: @product }
-    end
   end
 end

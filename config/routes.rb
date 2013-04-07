@@ -1,5 +1,10 @@
 Dress::Application.routes.draw do
   resources :products
+
+  resources :types do
+    resources :designers, :styles
+  end
+
   namespace :admin do
     resources :products, :types, :styles, :designers
   end
