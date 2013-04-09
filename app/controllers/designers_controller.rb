@@ -10,11 +10,11 @@ class DesignersController < ApplicationController
   end
 
   def show
-    @designer = Designer.find(params[:id])
+    @designer = Designer.find_by_alias(params[:id])
     @types = Type.all
     @styles = Style.all
-    @designer = Designer.all
-    @products = Product.where("designer_id = ?", params[:id])
+    @designers = Designer.all
+    @products = Product.where("designer_id = ?", @designer)
 
   end
 end

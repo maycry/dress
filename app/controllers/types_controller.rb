@@ -14,9 +14,9 @@ class TypesController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    @type = Type.find(params[:id])
+    @type = Type.find_by_alias!(params[:id])
     @types = Type.all
-    @products = Product.where("type_id = ?", params[:id])
+    @products = Product.where("type_id = ?", @type)
     @designers = Designer.all
     @styles = Style.all
   end

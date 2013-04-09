@@ -14,7 +14,7 @@
 			</nav>
 			<nav class="products-menu">
 				<% @types.each do |s| %>
-					<%= link_to s.name, type_url(s.id), class: "black-link" %>
+					<%= link_to s.name, type_path(s), class: "black-link" %>
 				<% end %>
 			</nav>
 		</div>
