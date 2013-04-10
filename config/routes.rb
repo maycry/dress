@@ -1,6 +1,13 @@
 Dress::Application.routes.draw do
   root :to => 'products#home'
+  get "log_in" => "sessions#new", :as =>"log_in"
+  get "log_out" => "sessions#destroy", :as =>"log_out"
   get 'quality' => 'pages#quality'
+
+  namespace :admin do
+    resources :products, :types, :styles, :designers
+  end
+
   resources :types, path: "" do
     resources :designers, :styles
   end
@@ -8,12 +15,9 @@ Dress::Application.routes.draw do
 
   
 
-  namespace :admin do
-    resources :products, :types, :styles, :designers
-  end
+ 
   
-  get "log_in" => "sessions#new", :as =>"log_in"
-  get "log_out" => "sessions#destroy", :as =>"log_out"
+ 
   resources :sessions
 
   # The priority is based upon order of creation:

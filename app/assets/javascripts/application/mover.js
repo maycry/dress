@@ -1,8 +1,9 @@
 $(function(){
 	var mover = $(".mover");
 	var moverWrapper = $(".mover-wrapper");
-	var maxWidth = 0
-	width = mover.width();
+	var maxWidth = 0;
+	var width = mover.width();
+	var x = 0;
 
 	$(".item-wrapper").each(function(){
 		maxWidth += $(this).width();

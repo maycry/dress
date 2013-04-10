@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
-  	def new
-  	end
+	def new
+		@types = Type.all
+	end
 
 	def create
 		salt = "$2a$10$tpM/96Pd5rHl0H9FNB01te";

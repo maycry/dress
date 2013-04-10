@@ -1,3 +1,4 @@
+@import "application/shared";
 body.admin{
 	margin-top: 40px;
 }
@@ -9,20 +10,45 @@ body.admin{
 			width: 171px;
 			height: 84px;
 			margin: 0 0;
+			&:hover{
+				background-color: $hover-link-color;
+			}
+		}
+		&.active{
+			pointer-events: none;
+			cursor: default;
 		}
 	}
-	.about-menu{
+	.about-menu, .products-menu{
 		padding-top: 17px;
-		a{
-			font-size: 13px;
-			margin-right: 10px;
+		margin-left: -10px;
+		div{
+			display: inline-block;
+			a{
+				display: block;
+				font-size: 13px;
+				padding: 0 8px;
+				line-height: 20px;
+				color: black;
+				&:hover{
+					color: $hover-link-color;
+				}
+			}
+		}
+		.current{
+			background-color: $buy-wrapper-color;
+			box-shadow: 0 1px 1px rgba(black, 0.2) inset;
+			border-radius: 3px;
+			pointer-events: none;
+			a{
+				text-decoration: none;
+			}
 		}
 	}
 	.products-menu{
 		padding-top: 10px;
 		a{
 			font-size: 14px;
-			margin-right: 10px;
 			text-transform: uppercase;
 			letter-spacing: 1px;
 		}

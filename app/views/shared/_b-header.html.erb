@@ -1,20 +1,17 @@
 <div class="wrapper">
 	<header class="b-header">
-		<div class="logo col-1-4">
-			<%= link_to root_path do%>
-				<h1 class="hide-text">Makemydress</h1>
-			<% end %>
-		</div>
+		
+		<%= logo_link %>
 		<div class="col-1-2">
 			<nav class="about-menu">
-				<a class="black-link" href="/quality">Качество</a>
-				<a class="black-link" href="/shipping">Доставка и оплата</a>
-				<a class="black-link" href="/faq">Вопрос-ответ</a>
-				<a class="black-link" href="/contacts">Контакты</a>
+				<%= nav_link "Качество", "/quality" %>
+				<%= nav_link "Доставка и оплата", "/shipping" %>
+				<%= nav_link "Вопрос-ответ", "/faq" %>
+				<%= nav_link "Контакты", "/contacts" %>
 			</nav>
 			<nav class="products-menu">
 				<% @types.each do |s| %>
-					<%= link_to s.name, type_path(s), class: "black-link" %>
+					<%= nav_link s.name, type_path(s) %>
 				<% end %>
 			</nav>
 		</div>
