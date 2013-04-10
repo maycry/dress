@@ -16,7 +16,7 @@ class TypesController < ApplicationController
   def show
     @type = Type.find_by_alias!(params[:id])
     @types = Type.all
-    @products = Product.where("type_id = ?", @type)
+    @products = Product.where("type_id = ?", @type).page params[:page]
     @designers = Designer.all
     @styles = Style.all
   end

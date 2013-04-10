@@ -1,19 +1,11 @@
 class ProductsController < ApplicationController
 
   def home
-    @products = Product.limit(5)
+    @products = Product.order("created_at desc").page(1)
     @types = Type.all
   end
 
   def index
-    if params[:designer_alias].nil? && params[:style_alias].nil?
-      @products = Product.where("type_id = ?", Type.find_by_alias(params[:type_alias]).id)
-    elsif params[:style_alias].nil?
-      @products = Product.where("type_id = ? AND designer_id = ?", Type.find_by_alias(params[:type_alias]).id, Designer.find_by_alias(params[:designer_alias]).id)
-    else
-      @products = Product.where("type_id = ? AND style_id = ?", Type.find_by_alias(params[:type_alias]).id, Style.find_by_alias(params[:style_alias]).id)
-    end
-
     @designers = Designer.all
     @styles = Style.all
     @types = Type.all

@@ -12,12 +12,7 @@ Dress::Application.routes.draw do
     resources :designers, :styles
   end
   resources :products
-
   
-
- 
-  
- 
   resources :sessions
 
   # The priority is based upon order of creation:

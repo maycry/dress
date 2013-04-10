@@ -6,12 +6,12 @@ body.admin{
 	height: 84px;
 	.logo{
 		h1{
-			background: #333 image_url("logo.png") 0 center no-repeat;
+			background: image_url("logo.png") 0 top no-repeat;
 			width: 171px;
-			height: 84px;
-			margin: 0 0;
+			height: 13px;
+			margin: 35px 0 10px;
 			&:hover{
-				background-color: $hover-link-color;
+				background-position-y:bottom;
 			}
 		}
 		&.active{
@@ -46,7 +46,7 @@ body.admin{
 		}
 	}
 	.products-menu{
-		padding-top: 10px;
+		padding-top: 7px;
 		a{
 			font-size: 14px;
 			text-transform: uppercase;

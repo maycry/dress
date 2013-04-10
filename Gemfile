@@ -34,6 +34,7 @@ gem 'aws-sdk', '~> 1.5.7'
 gem 'bcrypt-ruby', '~> 3.0.0', :require => "bcrypt"
 gem 'formtastic'
 gem 'fastimage'
+gem 'kaminari'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'

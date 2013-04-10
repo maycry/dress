@@ -10,9 +10,11 @@ class StylesController < ApplicationController
   end
 
   def show
-    @style = Style.find(params[:id])
+    @style = Style.find_by_alias!(params[:id])
     @types = Type.all
-    @products = Product.where("style_id = ?", params[:id])
-
+    @type = Type.find_by_alias!(params[:type_id])
+    @products = Product.where("style_id = ?", @style)
+    @designers = Designer.all
+    @styles = Style.all
   end
 end
