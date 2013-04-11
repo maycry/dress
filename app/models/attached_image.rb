@@ -12,5 +12,5 @@ class AttachedImage < ActiveRecord::Base
 		:path => "/products/:product_id/:style/:basename.:extension",
 		:storage => :s3,
 	    :s3_credentials => S3_CREDENTIALS
-	attr_accessible :image, :image_file_name
+	attr_accessible :image, :image_file_name, :replica
 end

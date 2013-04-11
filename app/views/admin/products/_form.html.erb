@@ -16,6 +16,7 @@
       <%= content_tag :div, class: "image"  do %>
         <%= image_tag ff.object.image.url(:thumb5) %>
         <%= ff.input :_destroy, :as => :boolean, :wrapper_html => { :class => "destroy-checkbox" } %>
+        <%= ff.input :replica %>
       <% end %>
     <% end %>
   <% end %>
