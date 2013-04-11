@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130404202018) do
+ActiveRecord::Schema.define(:version => 20130410205205) do
 
   create_table "attached_images", :force => true do |t|
     t.datetime "created_at",         :null => false
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20130404202018) do
     t.integer  "type_id"
     t.integer  "style_id"
     t.integer  "designer_id"
+    t.text     "description"
   end
 
   create_table "styles", :force => true do |t|

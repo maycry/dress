@@ -17,6 +17,9 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 	-moz-border-radius: 4px;
 	border-radius: 4px;
 }
+select{
+	width: 364px;
+}
 .select *{
 	vertical-align: 5px;
 }
@@ -56,6 +59,8 @@ label{
 			text-align: left;
 		}
 	}
-	
+}
+textarea{
+	height: 100px;
 }
 .admin-content form{ ol, li{ list-style: none;}}

@@ -6,5 +6,5 @@ class Product < ActiveRecord::Base
 	accepts_nested_attributes_for :attached_images, :type, :allow_destroy => true
 	accepts_nested_attributes_for :type, :reject_if => proc { |attributes| attributes['name'].blank? }
 	attr_accessible :name, :attached_images_attributes, :price, :code, :type_id, :style_id, :designer_id
-	paginates_per 15
+	paginates_per 5
 end
