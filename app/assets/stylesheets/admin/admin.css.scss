@@ -56,23 +56,25 @@ body,html{
 	padding: 66px 4% 0 4%;
 	width: 100%;
 	.b-product{
+		position: relative;
 		width: 129px;
 		height: 237px;
-		.delete{
-			position: absolute;
-			text-decoration: none;
-			font-size: 18px;
-			font-weight: bold;
-			color: white;
-			padding: 0 5px;
-			background-color: rgba(black, 0.1);
-			&:hover{
-				background-color: rgba(black, 0.2);
-				color: $hover-link-color;
-			}
-		}
 		&:nth-child(5n){
 			margin: 15px 19px 0 0;
+		}
+	}
+	.delete{
+		position: absolute;
+		text-decoration: none;
+		font-size: 18px;
+		font-weight: bold;
+		color: white;
+		padding: 0 5px;
+		top:0;
+		background-color: rgba(black, 0.1);
+		&:hover{
+			background-color: rgba(black, 0.2);
+			color: $hover-link-color;
 		}
 	}
 	.add-product{

@@ -15,7 +15,8 @@
     <%= f.semantic_fields_for :attached_images do |ff|%>
       <%= content_tag :div, class: "image"  do %>
         <%= image_tag ff.object.image.url(:thumb5) %>
-        <%= ff.input :_destroy, :as => :boolean, :wrapper_html => { :class => "destroy-checkbox" } %>
+        <%= ff.input :_destroy, :as => :hidden, :wrapper_html => { :class => "destroy-checkbox" } %>
+        <%= link_to "×", "#", class: "delete" %>
         <%= ff.input :replica %>
       <% end %>
     <% end %>

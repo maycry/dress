@@ -6,19 +6,23 @@
 		</div>
 		<div class="thumbs">
 			<div class="original">
-				<% @product.attached_images.each do |ai| %>
+				<% @images_original.each do |ai| %>
 					<div class="thumb">
 						<%= image_tag ai.image.url(:thumb_small), data: {width: "1200", height: "600", original: ai.image.url} %>
 					</div>
 				<% end %>
 				<p>Оригинальные фото</p>
 			</div>
-			<!-- <div class="replica">
-				<div class="thumb"></div>
-				<div class="thumb"></div>
-				<div class="thumb"></div>
+			<% unless @images_replica.empty? %>
+			<div class="replica">
+				<% @images_replica.each do |ai| %>
+					<div class="thumb">
+						<%= image_tag ai.image.url(:thumb_small), data: {width: "1200", height: "600", original: ai.image.url} %>
+					</div>
+				<% end %>
 				<p>Фото реплик</p>
-			</div> -->
+			</div>
+			<% end %>
 		</div>
 	</div>
 	<div class="about col-1-2">

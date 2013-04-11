@@ -13,3 +13,11 @@
 //= require jquery
 //= require jquery-ui
 //= require jquery_ujs
+
+$(function(){
+	$('form').on('click', '.delete', function(e){
+		$(this).prev('.hidden').children("input[type=hidden]").val('1');
+		$(this).parent('.image').hide();
+		e.preventDefault();
+	})
+})

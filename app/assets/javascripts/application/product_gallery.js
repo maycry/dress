@@ -51,7 +51,7 @@ jQuery(document).ready(function($) {
 		zoom.show();
 	});
 
-	$(".original .thumb img").click(
+	$(".thumb img").click(
 		function(){
 			main_img.attr("src", $(this).data("original")); 
 			$(".zoom").css("background-image", "url("+$(this).data("original")+")");
