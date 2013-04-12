@@ -15,6 +15,6 @@ class DesignersController < ApplicationController
     @types = Type.all
     @styles = Style.all
     @designers = Designer.all
-    @products = Product.where("designer_id = ?", @designer)
+    @products = Product.where("designer_id = ?", @designer).page params[:page]
   end
 end

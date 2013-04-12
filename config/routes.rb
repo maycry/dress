@@ -9,10 +9,13 @@ Dress::Application.routes.draw do
   end
 
   resources :types, path: "" do
-    resources :designers, :styles
+    get ':id/page/:page', :action => :show, :on => :collection
+    resources :designers, :styles do
+      get ':id/page/:page', :action => :show, :on => :collection
+    end
   end
+
   resources :products
-  
   resources :sessions
 
   # The priority is based upon order of creation:
