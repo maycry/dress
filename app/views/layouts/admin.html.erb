@@ -2,16 +2,16 @@
 <html>
 <head>
   <title>Dress</title>
-  <%= stylesheet_link_tag    "admin", :media => "all" %>
-  <%= javascript_include_tag "admin" %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<% flash.each do |name, msg| %>
-	  <%= content_tag :div, msg, :id => "flash-#{name}", :class => "flash-message" %>
-	<% end %>
-	<%= render 'admin/layouts/header' if is_loggedin %>
-	<%= yield %>
-	<%= render 'admin/layouts/footer' if is_loggedin %>
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash-#{name}", :class => "flash-message" %>
+  <% end %>
+  <%= render 'admin/layouts/header' if is_loggedin %>
+  <%= yield %>
+  <%= render 'admin/layouts/footer' if is_loggedin %>
 </body>
 </html>
