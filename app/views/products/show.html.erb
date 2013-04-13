@@ -31,7 +31,9 @@
 	<div class="look col-1-2">
 		<div class="photo">
 			<div class="zoom"></div>
-			<%= image_tag @product.attached_images.first.image.url, data: {width: "1200", height: "600"} %>
+			<% width1 = FastImage.size(@product.attached_images.first.image.url)[0] %>
+			<% height1 = FastImage.size(@product.attached_images.first.image.url)[1] %>
+			<%= image_tag @product.attached_images.first.image.url, data: {width: width1, height: height1} %>
 		</div>
 		<div class="thumbs">
 			<div class="original">

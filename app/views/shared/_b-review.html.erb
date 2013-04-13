@@ -1,5 +1,13 @@
+<div class="b-popup f-q4">
+	<div class="close">×</div>
+	<div class="b-slider fotorama" data-width="100%" data-background="#222" data-zoomToFit="false" data-fitToWindowHeight="true" data-fitToWindowHeightMargin="0"> 
+		<% @review_images.each do |image|  %> 
+			<%= image_tag image %>
+		<% end %>
+	</div>
+</div>
 <section class="b-review">
-	<div class="col-1-3 review-image">
+	<div class="col-1-3 review-image" data-slider="f-q4">
 	</div>
 	<div class="col-2-3 review">
 		<span>
