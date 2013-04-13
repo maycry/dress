@@ -8,7 +8,7 @@ h1{
 h2{
 	font-size: 24px;
 	line-height: 32px;
-	margin-bottom: 16px;
+	margin-bottom: 8px;
 }
 h3{
 	font-size: 18px;
@@ -21,7 +21,7 @@ h5{
 	line-height: 22px;
 	font-weight: bold;
 }
-h5{
+h6{
 	font-size: 14px;
 	line-height: 22px;
 	font-weight: bold;
@@ -45,7 +45,18 @@ ul{
 		}
 	}
 }
-
+ol{
+	li{
+		margin-left: 23px;
+	}
+}
+blockquote{
+	background-color: $buy-wrapper-color;
+	border: solid 3px $buy-wrapper-d7color;
+	box-shadow: 0 0 0 3px $buy-wrapper-color inset, 0 0 0 5px $buy-wrapper-d7color inset; 
+	padding: 17px 25px 10px;
+	margin: 25px 0 30px -20%;
+}
 a{
 	color: $link-color;
 }
