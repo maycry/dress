@@ -1,5 +1,10 @@
 @import "shared";
-
+body.show-popup{
+	overflow: hidden;
+	footer{
+		display: none;
+	}
+}
 .flash-message{
 	width:330px;
 	position: absolute;
@@ -33,7 +38,9 @@
 .pink{
 	color: $pink-color;
 }
-
+.hidden{
+	display: none;
+}
 [class*="col-"]{
 	float: left;
 	/*padding: 0 8px;*/

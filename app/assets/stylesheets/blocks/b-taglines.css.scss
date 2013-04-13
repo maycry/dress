@@ -1,3 +1,4 @@
+@import 'shared';
 .b-taglines{
 	padding-top: 25px;
 	overflow: auto;
@@ -60,6 +61,7 @@
 				margin-right: 2%;
 				border: 5px solid #ccc;
 				position: relative;
+				cursor: pointer;
 				&.video:after{
 					content: "";
 					position: absolute;
@@ -69,6 +71,15 @@
 					left: 50%;
 					margin-left: -20px;
 					margin-top: 7px;
+				}
+				&.q1{
+					background: image_url("f-q1.png") center center;
+				}
+				&.q2{
+					background: image_url("f-q2.png") center center;
+				}
+				&:hover{
+					border-color: $buy-wrapper-d7color;
 				}
 			}
 			.sample-item:last-child{

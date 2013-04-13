@@ -1,0 +1,29 @@
+.b-popup{
+	position: absolute;
+	width: 100%;
+	z-index: 3;
+	top:0;
+	left: 0;
+	background-color: rgba(#222, 0.8);
+	padding: 0 10%;
+	.close{
+		position: absolute;
+		display: block;
+		width: 10%;
+		height: 100%;
+		right: 0;
+		top: 0;
+		font-size: 72px;
+		font-weight: bold;
+		color: white;
+		color: rgba(white, .5);
+		text-align: center;
+		cursor: pointer;
+		&:hover{
+			background-color: rgba(white, .05);
+		}
+	}
+	.f-q3 .video-frame{
+		text-align: center
+	}
+}
