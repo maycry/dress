@@ -3,6 +3,10 @@ Dress::Application.routes.draw do
   get "log_in" => "sessions#new", :as =>"log_in"
   get "log_out" => "sessions#destroy", :as =>"log_out"
   get 'quality' => 'pages#quality'
+  get 'shipping' => 'pages#shipping'
+  get 'faq' => 'pages#faq'
+  get 'contacts' => 'pages#contacts'
+  get 'about' => 'pages#about'
 
   namespace :admin do
     resources :products, :types, :styles, :designers
