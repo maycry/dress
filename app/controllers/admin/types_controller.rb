@@ -14,7 +14,7 @@ class Admin::TypesController < AdminController
   # GET /products/1
   # GET /products/1.json
   def show
-    @type = Type.find(params[:id])
+    @type = Type.find_by_alias!(params[:id])
 
     respond_to do |format|
       format.html { render html: admin_type_path(@type)}
@@ -35,7 +35,7 @@ class Admin::TypesController < AdminController
 
   # GET /type/1/edit
   def edit
-    @type = Type.find(params[:id])
+    @type = Type.find_by_alias!(params[:id])
   end
 
   # POST /type
@@ -57,7 +57,7 @@ class Admin::TypesController < AdminController
   # PUT /type/1
   # PUT /type/1.json
   def update
-    @type = Type.find(params[:id])
+    @type = Type.find_by_alias!(params[:id])
 
     respond_to do |format|
       if @type.update_attributes(params[:type])
@@ -73,7 +73,7 @@ class Admin::TypesController < AdminController
   # DELETE /type/1
   # DELETE /type/1.json
   def destroy
-    @type = Type.find(params[:id])
+    @type = Type.find_by_alias!(params[:id])
     @type.destroy
 
     respond_to do |format|

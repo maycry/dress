@@ -14,7 +14,7 @@ class Admin::DesignersController < AdminController
   # GET /products/1
   # GET /products/1.json
   def show
-    @designer = Designer.find(params[:id])
+    @designer = Designer.find_by_alias!(params[:id])
 
     respond_to do |format|
       format.html { render html: admin_designer_path(@designer)}
@@ -35,7 +35,7 @@ class Admin::DesignersController < AdminController
 
   # GET /designer/1/edit
   def edit
-    @designer = Designer.find(params[:id])
+    @designer = Designer.find_by_alias!(params[:id])
   end
 
   # POST /designer
@@ -57,7 +57,7 @@ class Admin::DesignersController < AdminController
   # PUT /designer/1
   # PUT /designer/1.json
   def update
-    @designer = Designer.find(params[:id])
+    @designer = Designer.find_by_alias!(params[:id])
 
     respond_to do |format|
       if @designer.update_attributes(params[:designer])
@@ -73,7 +73,7 @@ class Admin::DesignersController < AdminController
   # DELETE /designer/1
   # DELETE /designer/1.json
   def destroy
-    @designer = Designer.find(params[:id])
+    @designer = Designer.find_by_alias!(params[:id])
     @designer.destroy
 
     respond_to do |format|
