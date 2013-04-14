@@ -1,11 +1,11 @@
 <header class="admin-header">
 	<nav class="col-3-5 menu">
 
-		<%= nav_link "←", root_url %>
-		<%= nav_link "Products", admin_products_url %>
-		<%= nav_link "Types", admin_types_url %>
-		<%= nav_link "Designers", admin_designers_url %>
-		<%= nav_link "Styles", admin_styles_url %>
+		<%= nav_link "←", root_path %>
+		<%= nav_link "Products", admin_products_path %>
+		<%= nav_link "Types", admin_types_path %>
+		<%= nav_link "Designers", admin_designers_path %>
+		<%= nav_link "Styles", admin_styles_path %>
 	</nav>
 	<%= link_to("", log_out_path, :class => "logout icon-off") %>
 </header>

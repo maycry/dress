@@ -2,21 +2,21 @@
 	<div class="col-1-2">
 	<div class="module">
 		<h4>Дизайнеры</h4>
-		<ul>
+		<div class="categorie">
 			<% designers.each do |designer| %>
-				<li><%= link_to designer.name, type_designer_url(type, designer)  %></li>
-			<% end %>    
-		</ul>
+				<%= nav_link designer.name, type_designer_path(type, designer) %>
+			<% end %>
+		</div>    
 	</div>
 </div>
 <div class="col-1-2">
 	<div class="module">
 		<h4>Фасоны</h4>
-		<ul>
+		<div class="categorie">
 			<% styles.each do |style| %>
-				<li><%= link_to style.name, type_style_url(type, style)  %></li>
-			<% end %>    
-		</ul>
+				<%= nav_link style.name, type_style_path(type, style) %>
+			<% end %> 
+		</div>
 	</div>
 </div>
 </section>

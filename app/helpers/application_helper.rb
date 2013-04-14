@@ -1,15 +1,21 @@
 module ApplicationHelper
 
-	def nav_link(link_text, link_path, c = "")
-	  if current_page?(link_path)
-	  	content_tag(:div, :class => 'current') do
-	  	  link_to link_text, link_path, :class => "#{c}"
-	  	end
-	  else
-	  	content_tag(:div) do
-	  	  link_to link_text, link_path, :class => "#{c}"
-	  	end
-	  end
+	def nav_link(link_text, link_path)
+		inc = is_active_link? link_path, :inclusive
+		exc = is_active_link? link_path, :exclusive
+		class_name = ''
+
+		if inc && exc
+			class_name = 'active'
+		elsif inc
+			class_name = 'current'
+		else
+			class_name 
+		end
+
+		content_tag(:div, class: class_name) do
+  	  link_to link_text, link_path
+  	end
 	end
 
 	def logo_link

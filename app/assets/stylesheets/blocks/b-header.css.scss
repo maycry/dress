@@ -35,7 +35,7 @@ body.admin{
 				}
 			}
 		}
-		.current{
+		.active{
 			background-color: $buy-wrapper-color;
 			box-shadow: 0 1px 1px rgba(black, 0.2) inset;
 			border-radius: 3px;
@@ -43,6 +43,11 @@ body.admin{
 			a{
 				text-decoration: none;
 			}
+		}
+		.current{
+			background-color: $buy-wrapper-color;
+			box-shadow: 0 1px 1px rgba(black, 0.2) inset;
+			border-radius: 3px;
 		}
 	}
 	.products-menu{
