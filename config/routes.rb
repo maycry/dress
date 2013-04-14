@@ -1,4 +1,6 @@
 Dress::Application.routes.draw do
+  get "sitemap/show"
+
   root :to => 'products#home'
   get "log_in" => "sessions#new", :as =>"log_in"
   get "log_out" => "sessions#destroy", :as =>"log_out"
@@ -7,6 +9,7 @@ Dress::Application.routes.draw do
   get 'faq' => 'pages#faq'
   get 'contacts' => 'pages#contacts'
   get 'about' => 'pages#about'
+  resources :sitemap
 
   namespace :admin do
     resources :products, :types, :styles, :designers
