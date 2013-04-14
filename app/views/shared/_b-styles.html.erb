@@ -1,0 +1,11 @@
+<section class="b-styles">
+	<% @styles.each do |style| %>
+		<div class="b-product b-style">
+			<%= link_to type_style_url(@type, style) do %>
+				<%= image_tag style.image.url %>
+				<%= style.name %>
+			<% end %>
+		</div>
+	<% end %>
+<div class="clr"></div>
+</section>

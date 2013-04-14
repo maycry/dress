@@ -14,7 +14,7 @@ class Admin::StylesController < AdminController
   # GET /products/1
   # GET /products/1.json
   def show
-    @style = Style.find(params[:id])
+    @style = Style.find_by_alias!(params[:id])
 
     respond_to do |format|
       format.html { render html: admin_style_path(@style)}
@@ -35,7 +35,7 @@ class Admin::StylesController < AdminController
 
   # GET /styles/1/edit
   def edit
-    @style = Style.find(params[:id])
+    @style = Style.find_by_alias!(params[:id])
   end
 
   # POST /styles
@@ -57,7 +57,7 @@ class Admin::StylesController < AdminController
   # PUT /styles/1
   # PUT /styles/1.json
   def update
-    @style = Style.find(params[:id])
+    @style = Style.find_by_alias!(params[:id])
 
     respond_to do |format|
       if @style.update_attributes(params[:style])
@@ -73,7 +73,7 @@ class Admin::StylesController < AdminController
   # DELETE /styles/1
   # DELETE /styles/1.json
   def destroy
-    @style = Style.find(params[:id])
+    @style = Style.find_by_alias!(params[:id])
     @style.destroy
 
     respond_to do |format|

@@ -3,6 +3,8 @@ class ProductsController < ApplicationController
   def home
     @products = Product.order("created_at desc").page(1)
     @types = Type.all
+    @type = Type.first
+    @styles = Style.all
     @review_images = Dir.glob("app/assets/images/reviews/1/*")
     @review_images.each {|i| i.slice!("app/assets/images/")}
   end
