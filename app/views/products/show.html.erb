@@ -1,4 +1,4 @@
-<div class="b-popup f-q1">
+<div class="b-popup f-q1 hidden">
 	<div class="close">×</div>
 	<div class="b-slider fotorama" data-width="100%" data-background="#222" data-zoomToFit="false" data-fitToWindowHeight="true" data-fitToWindowHeightMargin="0"> 
 		<%= image_tag "pages/quality/cool-1.jpg" %>
@@ -9,7 +9,7 @@
 		<%= image_tag "pages/quality/cool-6.jpg" %>
 	</div>
 </div>
-<div class="b-popup f-q2">
+<div class="b-popup f-q2 hidden">
 	<div class="close">×</div>
 	<div class="b-slider fotorama" data-width="100%" data-background="#222" data-zoomToFit="false" data-fitToWindowHeight="true" data-fitToWindowHeightMargin="0"> 
 		<%= image_tag "pages/quality/lace-1.jpg" %>
@@ -20,7 +20,7 @@
 		<%= image_tag "pages/quality/lace-6.jpg" %>
 	</div>
 </div>
-<div class="b-popup f-q3">
+<div class="b-popup f-q3 hidden">
 	<div class="close">×</div>
 	<div class="b-slider fotorama" data-width="100%" data-background="#222" data-zoomToFit="false" data-fitToWindowHeight="true" data-fitToWindowHeightMargin="0"> 
 		<div class="video-frame"><iframe width="420" height="315" src="http://www.youtube.com/embed/qJH-XsnTLc4?rel=0" frameborder="0" allowfullscreen></iframe></div>
@@ -64,7 +64,7 @@
 		</div>
 		<div class="buy-wrapper col-1-2">
 			<%= return_price @product.price %>
-			<%= link_to "Заказать", "/", :class => "button sexy-button"  %>
+			<%= link_to "Заказать", new_product_order_path(@product), :class => "button sexy-button"  %>
 		</div>
 	</div>
 	<div class="col-1-2">

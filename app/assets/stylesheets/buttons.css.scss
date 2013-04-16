@@ -21,14 +21,54 @@ $btnc : #fff1de;
 	color: $btnc;
 	text-shadow: 0 1px 0 rgba(darken($btncs,10%), 1);
 	font-size: 18px;
+	&:hover{
+		color: white;
+		@include gradient3(lighten($btnc3,2%), lighten($btnc2,1%), lighten($btnc1,3%));
+	}
+	&:active{
+		color: darken($btnc, 5%);
+		@include gradient(darken($btnc2, 10%), lighten($btnc2,5%));
+		-webkit-transition: none;
+	}
 }
-.sexy-button:hover{
-	color: white;
-	@include gradient3(lighten($btnc3,2%), lighten($btnc2,1%), lighten($btnc1,3%));
-}
-.sexy-button:active{
-	color: darken($btnc, 5%);
-	@include gradient(darken($btnc2, 10%), lighten($btnc2,5%));
-	-webkit-transition: none;
+
+.b-product-about{
+	form{
+		padding-top: 20px;
+		li{
+			padding-top: 10px;
+			margin-left: 0;
+			label{
+				width: 100px;
+			}
+		}
+		.buy-wrapper{
+			margin-top: 20px;
+			background-color: $buy-wrapper-color;
+			border: solid 3px $buy-wrapper-d7color;
+			padding: 10px 20px 20px 113px;
+			#order_submit_action input{
+				border: darken($btnc3, 7%) 1px solid;
+				display: inline-block;
+				font-family: Calibri;
+				border-radius: 3px;
+				box-shadow: 0 1px 0 rgba($btncs, 1);
+				@include gradient3($btnc3, $btnc2, $btnc1);
+				padding: 7px 30px;
+				color: $btnc;
+				text-shadow: 0 1px 0 rgba(darken($btncs,10%), 1);
+				font-size: 18px;
+				&:hover{
+					color: white;
+					@include gradient3(lighten($btnc3,2%), lighten($btnc2,1%), lighten($btnc1,3%));
+				}
+				&:active{
+					color: darken($btnc, 5%);
+					@include gradient(darken($btnc2, 10%), lighten($btnc2,5%));
+					-webkit-transition: none;
+				}
+			}
+		}
+	}
 }
 

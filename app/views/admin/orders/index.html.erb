@@ -1,0 +1,11 @@
+<div class="admin-content">
+	<table>
+		<tbody>
+			<% @orders.each do |order| %>
+				<tr><td><%= link_to "×", admin_order_path(order), :confirm => "Are you sure you want to delete #{order.name}?", :method => :delete, :class => "delete" %><%= link_to order.name, edit_admin_order_path(order) %></td></tr>
+			<% end %>
+		</tbody>
+	</table>
+		
+</div>
+

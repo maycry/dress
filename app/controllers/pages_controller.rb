@@ -18,4 +18,9 @@ class PagesController < ApplicationController
   def about
     @types = Type.all
   end
+  
+  def complete
+    @types = Type.all
+    
+  end
 end

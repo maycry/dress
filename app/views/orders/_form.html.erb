@@ -1,0 +1,12 @@
+<%= semantic_form_for @order, :url => { :action => "create" } do |f| %>
+	<%= f.inputs do %>
+	  <%= f.input :name, :label => "Ваше имя" %>
+	  <%= f.input :email, :label => "Имейл" %>
+	  <%= f.input :phone, :label => "Телефон"  %>
+  <% end %>
+  <%= content_tag :div, class: "buy-wrapper" do %>
+	  <%= f.actions do %>
+		  <%= f.action :submit, :label => "Заказать"  %>
+	  <% end %>
+  <% end %>
+<% end %>

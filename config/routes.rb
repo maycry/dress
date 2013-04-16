@@ -9,10 +9,11 @@ Dress::Application.routes.draw do
   get 'faq' => 'pages#faq'
   get 'contacts' => 'pages#contacts'
   get 'about' => 'pages#about'
+  get 'complete' => 'pages#complete'
   resources :sitemap
 
   namespace :admin do
-    resources :products, :types, :styles, :designers
+    resources :products, :types, :styles, :designers, :orders
   end
 
   resources :types, path: "" do
@@ -22,7 +23,9 @@ Dress::Application.routes.draw do
     end
   end
 
-  resources :products
+  resources :products do
+    resources :orders
+  end
   resources :sessions
 
   # The priority is based upon order of creation:
