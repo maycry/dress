@@ -3,6 +3,7 @@
 	  <%= f.input :name, :label => "Ваше имя" %>
 	  <%= f.input :email, :label => "Имейл" %>
 	  <%= f.input :phone, :label => "Телефон"  %>
+	  <%= f.input :product_id, as: 'hidden', value: params[:product_id]  %>
   <% end %>
   <%= content_tag :div, class: "buy-wrapper" do %>
 	  <%= f.actions do %>

@@ -21,6 +21,5 @@ class PagesController < ApplicationController
   
   def complete
     @types = Type.all
-    
   end
 end
