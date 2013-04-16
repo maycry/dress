@@ -3,3 +3,17 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    models: 
+      order: "Заказ"
+    attributes:
+      order:
+        name: "Ваше имя"
+    errors:
+      models:
+        order:
+          attributes:
+            name:
+              blank: "Введите имя, пожалуйста."
+            phone:
+              blank: "Введите номер вашего телефона, пожалуйста. Он нам нужен для уточнения деталей заказа."

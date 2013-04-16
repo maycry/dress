@@ -37,6 +37,10 @@ GEM
       uuidtools (~> 2.1)
     bcrypt-ruby (3.0.1)
     builder (3.0.4)
+    client_side_validations (3.2.5)
+    client_side_validations-formtastic (2.2.1)
+      client_side_validations (~> 3.2.0)
+      formtastic (~> 2.2.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.1)
@@ -48,7 +52,14 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
+    columnize (0.3.6)
     daemons (1.1.9)
+    debugger (1.5.0)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.2.0)
+      debugger-ruby_core_source (~> 1.2.0)
+    debugger-linecache (1.2.0)
+    debugger-ruby_core_source (1.2.0)
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (1.4.0)
@@ -149,7 +160,10 @@ DEPENDENCIES
   active_link_to
   aws-sdk (~> 1.5.7)
   bcrypt-ruby (~> 3.0.0)
+  client_side_validations
+  client_side_validations-formtastic
   coffee-rails (~> 3.2.1)
+  debugger
   fastimage
   formtastic
   jquery-rails

@@ -1,13 +1,14 @@
-<%= semantic_form_for @order, :url => { :action => "create" } do |f| %>
+<%= semantic_form_for @order, :validate => true, :url => { :action => "create" } do |f| %>
 	<%= f.inputs do %>
-	  <%= f.input :name, :label => "Ваше имя" %>
+	  <%= f.input :name, :label => "Ваше имя", :validate => { :presence => true } %>
+	  <%= f.input :phone, :label => "Телефон", :validate => { :presence => true }  %>
 	  <%= f.input :email, :label => "Имейл" %>
-	  <%= f.input :phone, :label => "Телефон"  %>
-	  <%= f.input :product_id, as: 'hidden', value: params[:product_id]  %>
+	  <%= f.input :product_id, as: 'hidden', value: params[:product_id] %>
+	  <p class="under-form">Все указанные данные, используются только для уточнения заказа и не будут разглашаться третьим лицам.</p>
   <% end %>
   <%= content_tag :div, class: "buy-wrapper" do %>
 	  <%= f.actions do %>
-		  <%= f.action :submit, :label => "Заказать"  %>
+		  <%= f.action :submit  %>
 	  <% end %>
   <% end %>
 <% end %>

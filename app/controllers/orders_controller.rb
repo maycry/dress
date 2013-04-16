@@ -4,17 +4,21 @@ class OrdersController < ApplicationController
     @order = Order.new
     @types = Type.all
     @product = Product.find(params[:product_id])
+
+    respond_to do |format|
+      format.html # new.html.erb
+    end
   end
 
   def create
     @order = Order.new(params[:order])
+    @types = Type.all
+    @product = Product.find(params[:product_id])
 
-    respond_to do |format|
-      if @order.save
-        format.html { redirect_to '/complete'}
-      else
-        format.html { render action: "new" }
-      end
+    if @order.save
+      redirect_to complete_path
+    else
+      render "new"
     end
   end
 

@@ -24,6 +24,7 @@ end
 group :development do
   gem 'sqlite3'
   gem 'thin'
+  gem 'debugger'
 end
 
 gem 'jquery-rails'
@@ -36,6 +37,10 @@ gem 'formtastic'
 gem 'fastimage'
 gem 'kaminari'
 gem 'active_link_to'
+
+gem 'formtastic'
+gem 'client_side_validations'
+gem 'client_side_validations-formtastic'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
