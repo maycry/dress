@@ -3,7 +3,7 @@ class Admin::ProductsController < AdminController
   # GET /products.json
 
   def index
-    @products = Product.all
+    @products = Product.page(params[:page]).per(30)
 
     respond_to do |format|
       format.html # index.html.erb
