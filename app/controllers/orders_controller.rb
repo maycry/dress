@@ -8,10 +8,6 @@ class OrdersController < ApplicationController
     @order.name  ||= session[:name]
     @order.phone ||= session[:phone]
     @order.email ||= session[:email]
-
-    respond_to do |format|
-      format.html # new.html.erb
-    end
   end
 
   def create
@@ -19,12 +15,13 @@ class OrdersController < ApplicationController
     @types = Type.all
     @product = Product.find(params[:product_id])
 
-    session[:name]  ||= @order.name 
-    session[:phone] ||= @order.phone
-    session[:email] ||= @order.email  
-
     if @order.save
       redirect_to complete_path
+      OrderMailer.order_complete(@order, @product, "byorickq@gmail.com").deliver
+      OrderMailer.order_complete(@order, @product, "bykova.catia@gmail.com").deliver
+      session[:name]  ||= @order.name 
+      session[:phone] ||= @order.phone
+      session[:email] ||= @order.email 
     else
       render "new"
     end

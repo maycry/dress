@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>Катюня, у тебя заказ.<br />Заказала <%= @order.name %>, <%= @order.phone %>, платье <%= link_to "#{@product.designer.name} #{@product.code}", edit_admin_product_url(@product, :host => "www.makemydress.com.ua") %>.<br />Люблю тебя.</p>
+  </body>
+</html>
