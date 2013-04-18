@@ -35,7 +35,12 @@ article {
 		line-height: 25px;
 		margin-bottom: 13px;
 	}
-	
+	ul, ol{
+		li{
+			font-size: 17px;
+			margin-bottom: 13px;
+		}
+	}
 	.b-nexter{
 		.nexter-link{
 			line-height: 80px;
