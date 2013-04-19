@@ -51,6 +51,7 @@
 		.samples{
 			padding-top: 10px;
 			.sample-item{
+				position: relative;
 				display: inline-block;
 				width: 30%;
 				height: 65px;
@@ -60,16 +61,7 @@
 				position: relative;
 				cursor: pointer;
 				margin-bottom: 10px;
-				&.video:after{
-					content: "";
-					position: absolute;
-					width: 41px;
-					height: 41px;
-					background: image_url("video.png");
-					left: 50%;
-					margin-left: -20px;
-					margin-top: 7px;
-				}
+				
 				&.q1{background: image_url("f-q1.png") center center;}
 				&.q2{background: image_url("f-q2.png") center center;}
 				&.q3{background: image_url("f-q3.png") center center;}
@@ -82,4 +74,18 @@
 			}
 		}
 	}
+}
+.video{
+	position: relative;
+}
+.video:after{
+	content: "";
+	position: absolute;
+	width: 41px;
+	height: 41px;
+	background: image_url("video.png");
+	margin-right: -20px;
+	right: 50%;
+	top:50%;
+	margin-top: -20px;
 }

@@ -1,3 +1,4 @@
+@import "shared";
 article {
 	.wrapper{
 		overflow: auto;
@@ -115,6 +116,14 @@ article {
 			}
 		}
 	}
+	.video-quality{
+		cursor: pointer;
+		width: 217px;
+		height: 172px;
+		&:hover img{
+			border-color: $buy-wrapper-d7color;
+		}
+	}
 	.s-ornament{
 		padding-top: 25px;
 		padding-bottom: 20px;
@@ -189,4 +198,8 @@ article {
 			}
 		}
 	}
+	&.p-quality .b-taglines .video:after{
+		content: "" !important;
+		display: none;
+	} 
 }

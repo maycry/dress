@@ -1,6 +1,7 @@
 .b-popup{
 	position: fixed;
 	width: 100%;
+	height: 100%;
 	z-index: 3;
 	top:0;
 	left: 0;
@@ -25,7 +26,10 @@
 		}
 	}
 	.video-frame{
+		width: 100%;
+		background-color: rgba(#222, 1);
+		height: 100%;
 		text-align: center;
-		padding-top: 50px;
+		padding-top: 15%;
 	}
 }

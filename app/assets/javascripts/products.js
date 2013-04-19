@@ -3,7 +3,7 @@ $(function(){
 /*	$('.b-popup').each(function(){
 		$(this).addClass('hidden');
 	});*/
-	$('.sample-item,.review-image').click(function(){
+	$('.sample-item, .review-image, .video-quality').click(function(){
 		popup = $(this).data('slider');
 		$('.'+popup).removeClass('hidden');
 			return false;
