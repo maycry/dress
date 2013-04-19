@@ -33,7 +33,8 @@
 	color: $pink-color;
 }
 .hidden{
-	display: none;
+	position: absolute !important;
+	left: -10000px !important;
 }
 [class*="col-"]{
 	float: left;

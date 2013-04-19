@@ -5,10 +5,8 @@ $(function(){
 	});*/
 	$('.sample-item,.review-image').click(function(){
 		popup = $(this).data('slider');
-		setTimeout(function(){
-			$('.'+popup).removeClass('hidden');
+		$('.'+popup).removeClass('hidden');
 			return false;
-		}, 500);
 	});
 	$('.b-popup .close').click(function(){
 			$('body').removeClass('show-popup');
