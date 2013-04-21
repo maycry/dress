@@ -6,6 +6,7 @@
 	padding-bottom: 25px;
 	.tagline{
 		&.quality{
+			&:hover .tagline-ico:before{background-color: $hover-link-color;} 
 			a{text-decoration: none;}
 			h5{text-decoration: underline;}
 			p{color: black;}
@@ -25,7 +26,6 @@
 			height: 55px;
 			background-color: #333;
 			margin-bottom: 8px;
-			-webkit-transition: all 1s;
 		}
 		.tagline-ico-quality:before{background-image: image_url("icons/mp-quality.png");}
 		.tagline-ico-size:before{background-image: image_url("icons/mp-size.png");}
@@ -33,7 +33,6 @@
 		.tagline-ico-diamond:before{background-image: image_url("icons/mp-diamond.png");}
 		.tagline-ico-blades:before{background-image: image_url("icons/mp-blades.png");}
 	}
-	.tagline:hover .tagline-ico:before{background-color: #ff7fd9;}	
 }
 .b-taglines.home{
 	.tagline{

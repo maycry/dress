@@ -1,3 +1,4 @@
+@import "shared";
 .b-review{
 	overflow: auto;
 	padding-top: 19px;
@@ -6,6 +7,9 @@
 		cursor: pointer;
 		height: 109px;
 		background: image_url("review-1.jpg") center 0 no-repeat;
+		&:hover{
+			box-shadow: 0 0 0 5px $buy-wrapper-color inset;
+		}
 	}
 	.review{
 		padding-left: 5%;

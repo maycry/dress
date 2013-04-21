@@ -8,4 +8,8 @@ class Product < ActiveRecord::Base
 	accepts_nested_attributes_for :type, :reject_if => proc { |attributes| attributes['name'].blank? }
 	attr_accessible :name, :attached_images_attributes, :price, :code, :type_id, :style_id, :designer_id, :description
 	paginates_per 15
+
+	def autoname
+		"#{self.type.name} #{self.style.name.mb_chars.downcase} #{self.designer.name}"
+	end
 end
