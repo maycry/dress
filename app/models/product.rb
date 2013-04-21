@@ -10,6 +10,6 @@ class Product < ActiveRecord::Base
 	paginates_per 15
 
 	def autoname
-		"#{self.type.name} #{self.style.name.mb_chars.downcase} #{self.designer.name}"
+		"#{self.type.productname} #{self.style.name.mb_chars.downcase} #{self.designer.name}"
 	end
 end

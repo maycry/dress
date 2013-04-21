@@ -1,5 +1,5 @@
 class Type < ActiveRecord::Base
-  attr_accessible :alias, :name, :order
+  attr_accessible :alias, :name, :order, :productname
   has_many :products
   before_save :add_alias
   def add_alias
