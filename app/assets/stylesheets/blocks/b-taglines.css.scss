@@ -33,6 +33,9 @@
 .b-taglines.home{
 	.tagline{
 		width: 20%;
+		.video:after{
+			display: none;
+		}
 	}
 	.no-on-home{
 		display: none;
