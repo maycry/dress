@@ -1,60 +1,72 @@
 jQuery(document).ready(function($) {
-	var bimg_w=0, bimg_h=0;
-	var main_img, xi, yi;
+	var bimgW=0, bimgH=0;
+	var mainImg, xi, yi;
 	
-	var img_h = 0;
+	var imgH = 0;
 	var zoom = $(".zoom");
-	var zoomMode = false;
-	// $(".zoom").css("height", img_h);
-	// $(".zoom").css("background-image", "url("+main_img.attr("src")+")");
+	var isZoom = false;
+	var isLoading = true;
 
 	$(".photo img").load(function(){
-		main_img = $(this)
-		/*mw = $(this).width();
-		mh = $(this).height();
-		$(".zoom").css({"width": mw, "height": mh});*/
-		$(".zoom").css("background-image", "url(" + main_img.attr("src") + ")")
-		bimg_w = main_img.data("width");
-		bimg_h = main_img.data("height");
-		xi = main_img.offset().left;
-		yi = main_img.offset().top;
-		img_w = 430;
-		img_h = Math.round(img_w*(bimg_h/bimg_w));
-		console.log(bimg_w);
+		isLoading = false;
+		$(".photo").removeClass('loading');
 	});
-
+	$(".thumbs img").first().load(function(){
+		mainImg = $(".photo img")
+		$(".zoom").css("background-image", "url(" + mainImg.attr("src") + ")")
+		bimgW = mainImg.data("width");
+		bimgH = mainImg.data("height");
+		xi = mainImg.offset().left;
+		yi = mainImg.offset().top;
+		imgW = 430;
+		imgH = Math.round(imgW*(bimgH/bimgW));
+	});
 	function getX(xs){
-		var d = (bimg_w-img_w)/img_w;
-		return (-xs+xi)*d;
+		d = (bimgW-imgW)/imgW;
+		x = (-xs+xi)*d;
+		if (x > 0) {x = 0};
+		if (x < -bimgW+imgW) {x = -bimgW+imgW};
+		return x;
 	}
 	function getY(ys){
-		var d = (bimg_h-img_h)/img_h;
-		return (-ys+yi)*d;
+		d = (bimgH-imgH)/imgH;
+		y = (-ys+yi)*d;
+		if (y > 0) {y = 0};
+		if (y < -bimgH+imgH) {y = -bimgH+imgH};
+		return y;
 	}
-
 	$(document).mousemove(
 	  function(e){
 	    var el = $(e.target);
 	   
-		if(zoomMode) {
+		if(isZoom) {
 			zoom.css("background-position-x", getX(e.pageX));
 			zoom.css("background-position-y", getY(e.pageY));
 		}
-		if(zoomMode && !el.is(".zoom")) { 
+		if(isZoom && !el.is(zoom)) { 
 			zoom.hide();
-			zoomMode = false;
+			isZoom = false;
 			return;
 		}
-		if(!$(e.target).is(main_img)) return;
+		if(!$(e.target).is(mainImg)) return;
 
-		zoomMode = true; 
+		isZoom = true; 
 		zoom.show();
 	});
-
 	$(".thumb img").click(
 		function(){
-			main_img.attr("src", $(this).data("original")); 
-			$(".zoom").css("background-image", "url("+$(this).data("original")+")");
+			originalSize = $(this).data("original");
+			mainImg.attr("src", originalSize); 
+			$(".zoom").css("background-image", "url("+originalSize+")");
+			bimgW = $(this).data("width");
+			bimgH = $(this).data("height");
+			imgW = 430;
+			imgH = Math.round(imgW*(bimgH/bimgW));
+			isLoading = true;
+			setTimeout(function(){
+				if (isLoading){
+					$(".photo").addClass('loading');
+				}
+			}, 100);
 	});
-
 });

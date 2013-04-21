@@ -8,8 +8,19 @@
 			width: 430px;
 			margin-bottom: 15px;
 			position: relative;
+			&.loading:after{
+				content:" ";
+				position: absolute;
+				display: block;
+				width: 430px;
+				height: 5px;
+				top: 0;
+				background-image: image_url("preloader.gif");
+				z-index: 2;
+			}
 			img{
 				max-width: 100%;
+				display: block;
 			}
 			.zoom{
 				display: none;

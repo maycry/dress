@@ -27,32 +27,10 @@
 <section class="b-product-about">
 
 	<div class="look col-1-2">
-		<div class="photo">
-			<div class="zoom"></div>
-			<% width1 = FastImage.size(@product.attached_images.first.image.url)[0] %>
-			<% height1 = FastImage.size(@product.attached_images.first.image.url)[1] %>
-			<%= image_tag @product.attached_images.first.image.url, data: {width: width1, height: height1} %>
-		</div>
-		<div class="thumbs">
-			<div class="original">
-				<% @images_original.each do |ai| %>
-					<div class="thumb">
-						<%= image_tag ai.image.url(:thumb_small), data: {width: "1200", height: "600", original: ai.image.url} %>
-					</div>
-				<% end %>
-				<p>Оригинальные фото</p>
-			</div>
-			<% unless @images_replica.empty? %>
-			<div class="replica">
-				<% @images_replica.each do |ai| %>
-					<div class="thumb">
-						<%= image_tag ai.image.url(:thumb_small), data: {width: "1200", height: "600", original: ai.image.url} %>
-					</div>
-				<% end %>
-				<p>Фото реплик</p>
-			</div>
-			<% end %>
-		</div>
+		<%= render 'product_gallery', 
+			product: @product,
+			images_original: @images_original,
+			images_replica: @images_replica %>
 	</div>
 	<div class="about col-1-2">
 		<h1><%= @product.name %></h1>

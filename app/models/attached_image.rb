@@ -13,4 +13,12 @@ class AttachedImage < ActiveRecord::Base
 		:storage => :s3,
 	    :s3_credentials => S3_CREDENTIALS
 	attr_accessible :image, :image_file_name, :replica
+
+	def width
+		FastImage.size(self.image.url)[0]
+	end
+
+	def height
+		FastImage.size(self.image.url)[1]
+	end
 end

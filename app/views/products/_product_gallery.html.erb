@@ -1,0 +1,24 @@
+<div class="photo loading">
+	<div class="zoom"></div>
+	<%= image_tag images_original.first.image.url, data: {width: images_original.first.width, height: images_original.first.height} %>
+</div>
+<div class="thumbs">
+	<div class="original">
+		<% images_original.each do |ai| %>
+			<div class="thumb">
+				<%= image_tag ai.image.url(:thumb_small), data: {width: ai.width, height: ai.height, original: ai.image.url} %>
+			</div>
+		<% end %>
+		<p>Оригинальные фото</p>
+	</div>
+	<% unless images_replica.empty? %>
+	<div class="replica">
+		<% images_replica.each do |ai| %>
+			<div class="thumb">
+				<%= image_tag ai.image.url(:thumb_small), data: {width: ai.width, height: ai.height, original: ai.image.url} %>
+			</div>
+		<% end %>
+		<p>Фото реплик</p>
+	</div>
+	<% end %>
+</div>
