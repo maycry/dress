@@ -4,8 +4,8 @@
 </div>
 <div class="thumbs">
 	<div class="original">
-		<% images_original.each do |ai| %>
-			<div class="thumb">
+		<% images_original.each_with_index do |ai, index| %>
+			<div class="thumb<%= index == 0 ? ' active' : '' %>">
 				<%= image_tag ai.image.url(:thumb_small), data: {width: ai.width, height: ai.height, original: ai.image.url} %>
 			</div>
 		<% end %>

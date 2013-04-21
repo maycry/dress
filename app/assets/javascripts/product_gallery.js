@@ -63,6 +63,8 @@ jQuery(document).ready(function($) {
 			imgW = 430;
 			imgH = Math.round(imgW*(bimgH/bimgW));
 			isLoading = true;
+			$('.thumb').removeClass('active');
+			$(this).parent().addClass('active');
 			setTimeout(function(){
 				if (isLoading){
 					$(".photo").addClass('loading');

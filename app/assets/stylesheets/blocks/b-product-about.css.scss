@@ -50,6 +50,13 @@
 				margin-right: 6px;
 				margin-bottom: 6px;
 				cursor: pointer;
+				img{
+					display: block;
+					border: 1px solid white;
+				}
+				&.active img{
+					border: 1px solid $hover-link-color;
+				}
 			}
 			p{
 				font-size: 14px;
