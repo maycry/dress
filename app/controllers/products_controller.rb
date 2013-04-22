@@ -5,7 +5,8 @@ class ProductsController < ApplicationController
     @types = Type.all
     @type = Type.first
     @styles = Style.all
-    @review_images = Dir.glob("app/assets/images/reviews/1/*")
+    @review = rand(1..2)
+    @review_images = Dir.glob("app/assets/images/reviews/#{@review}/*")
     @review_images.each {|i| i.slice!("app/assets/images/")}
   end
 
@@ -26,7 +27,8 @@ class ProductsController < ApplicationController
     @images_replica = @product.attached_images.find_all_by_replica(true)
     @products = Product.where("type_id = ? AND style_id = ?", @product.type, @product.style).limit(5)
     @types = Type.all
-    @review_images = Dir.glob("app/assets/images/reviews/1/*")
+    @review = rand(1..2)
+    @review_images = Dir.glob("app/assets/images/reviews/#{@review}/*")
     @review_images.each {|i| i.slice!("app/assets/images/")}
   end
 end
