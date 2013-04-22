@@ -7,5 +7,11 @@
 		<%= nav_link "Styles", admin_styles_path %>
 		<%= nav_link "Orders", admin_orders_path %>
 	</nav>
+	<%= form_tag admin_products_path, :method => 'get' do %>
+	  <p>
+	    <%= text_field_tag :search, params[:search], data: {s: Style.order(:name).map(&:name).concat(Designer.order(:name).map(&:name))} %>
+	    <%= submit_tag "Search", :name => nil, style: "display:none" %>
+	  </p>
+	<% end %>
 	<%= link_to("", log_out_path, :class => "logout icon-off") %>
 </header>

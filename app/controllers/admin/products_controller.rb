@@ -3,7 +3,7 @@ class Admin::ProductsController < AdminController
   # GET /products.json
 
   def index
-    @products = Product.page(params[:page]).per(30)
+    @products = Product.search(params[:search], params[:page])
 
     respond_to do |format|
       format.html # index.html.erb

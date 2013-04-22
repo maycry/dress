@@ -12,4 +12,14 @@ class Product < ActiveRecord::Base
 	def autoname
 		"#{self.type.productname} #{self.style.name.mb_chars.downcase} #{self.designer.name}"
 	end
+
+	def self.search(search, page)
+	  if search
+	    s = joins(:style, :designer).where("styles.name like ? OR designers.name like ?", "%#{search.mb_chars.capitalize.to_s}%", "%#{search}%")
+	    s = where("code like ?", "%#{search}%") if s.empty?
+	    s.page(page).per(31)
+	  else
+	    page(page).per(31)
+	  end
+	end
 end
