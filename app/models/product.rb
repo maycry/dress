@@ -3,10 +3,11 @@ class Product < ActiveRecord::Base
 	belongs_to :type
 	belongs_to :style
 	belongs_to :designer
+	belongs_to :selection
 	belongs_to :order
 	accepts_nested_attributes_for :attached_images, :type, :allow_destroy => true
 	accepts_nested_attributes_for :type, :reject_if => proc { |attributes| attributes['name'].blank? }
-	attr_accessible :name, :attached_images_attributes, :price, :code, :type_id, :style_id, :designer_id, :description
+	attr_accessible :name, :attached_images_attributes, :price, :code, :type_id, :style_id, :designer_id, :selection_id, :description
 	paginates_per 15
 
 	def autoname
@@ -21,5 +22,14 @@ class Product < ActiveRecord::Base
 	  else
 	    page(page).per(31)
 	  end
+	end
+
+	def self.selection_image(selection)
+		product = where("selection_id = ?", selection).first
+		if product
+			"style=background-image:url(#{product.attached_images.first.image.url(:thumb5)})"
+		else
+			"" 
+		end
 	end
 end

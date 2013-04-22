@@ -1,0 +1,13 @@
+<div class="admin-content">
+	<%= link_to "Add set", new_admin_selection_path, class: "add-type" %>
+	<table>
+		<tbody>
+			<% @selections.each do |selection| %>
+				<tr><td><%= link_to "×", admin_selection_path(selection), :confirm => "Are you sure you want to delete #{selection.name}?", :method => :delete, :class => "delete" %><%= link_to selection.name, edit_admin_selection_path(selection) %></td></tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+
+
+

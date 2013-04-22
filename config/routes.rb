@@ -13,12 +13,12 @@ Dress::Application.routes.draw do
   resources :sitemap
 
   namespace :admin do
-    resources :products, :types, :styles, :designers, :orders
+    resources :products, :types, :styles, :designers, :selections, :orders 
   end
 
   resources :types, path: "" do
     get ':id/page/:page', :action => :show, :on => :collection
-    resources :designers, :styles do
+    resources :designers, :styles, :selections do
       get ':id/page/:page', :action => :show, :on => :collection
     end
   end

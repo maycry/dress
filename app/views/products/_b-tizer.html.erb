@@ -1,25 +1,31 @@
-<div class="col-1-2 tizer">
-		<div class="module">
-			<div class="col-1-3 image image-pregnat">
-			</div>
-			<div class="col-2-3 description">
-				<h3>Платья для беременных</h3>
-				<p>Подборка платьев с высокой талией для беременных.</p>
-				<br />
-				<p><strong>3500 грн</strong></p>
-			</div>
-		</div>
-	</div>
-	<div class="col-1-2 tizer">
-		<div class="module">
-			<div class="col-1-3 image image-pregnat">
-			</div>
-			<div class="col-2-3 description">
-				<h3>Платья для беременных</h3>
-				<p>Подборка платьев с высокой талией для беременных.</p>
-				<br />
-				<p><strong>3500 грн</strong></p>
+	<%= link_to type_selection_path(@type, @selections.first) do %>
+		<div class="col-1-2 tizer">
+			<div class="module">
+				<div class="col-1-3 image image-pregnat" >
+				</div>
+				<div class="col-2-3 description">
+					<%= content_tag :h3, Selection.first.name %>
+					<p>Подборка платьев с высокой талией для беременных.</p>
+					<br />
+					<p><strong>от 3500 грн</strong></p>
+				</div>
 			</div>
 		</div>
-	</div>
+	<% end %>
+
+	<%= link_to type_selection_path(@type, Selection.last) do %>
+		<div class="col-1-2 tizer">
+			<div class="module">
+				<div class="col-1-3 image image-pregnat" >
+				</div>
+				<div class="col-2-3 description">
+					<%= content_tag :h3, Selection.last.name %>
+					<p>У нас есть платья образцы. Вы можете записаться на примерку и оценить их качество сами.</p>
+					<br />
+					<p><strong>от 3500 грн</strong></p>
+				</div>
+			</div>
+		</div>
+	<% end %>
+
 </section>

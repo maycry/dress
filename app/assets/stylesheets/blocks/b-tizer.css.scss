@@ -1,0 +1,29 @@
+@import "shared";
+.b-tizers{
+	padding-top: 5px;
+	margin-bottom: 10px;
+	overflow: auto;
+	.tizer{
+		.image-pregnat{
+			height: 213px;
+			background: image_url("/assets/product-tizer.jpg") center center no-repeat;
+		}		
+		&:hover .description{
+			border: solid 2px $buy-wrapper-color;
+			border-left: none;
+		}
+		.description{
+			border: solid 2px #e3e3e3;
+			border-left: none;
+			height: 213px;
+			padding: 20px 35px 0 25px;
+			h3{
+				margin-bottom: 5px;
+				text-decoration: underline;
+			}
+			p{
+				color: black;
+			}
+		}
+	}
+}

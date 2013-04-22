@@ -1,7 +1,7 @@
-<section class="tizers">
-	<%= render 'products/b-tizer' %>
+<section class="b-tizers">
+	<%= @selection ? content_tag(:h1, @selection.name, class: "set") : (render('products/b-tizer') if @type.id ==1) %>
 </section>
-<%= render 'products/b-categories', type: type, designers: designers, styles: styles %>
+<%= render('products/b-categories', type: type, designers: designers, styles: styles) if (@type.id == 1 && !@selection) %>
 <section class="products-list">
 	<%= render products %>
 	<%= render 'shared/b-nexterp', :text => "Листать дальше" %>
