@@ -25,7 +25,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @images_original = @product.attached_images.find_all_by_replica(false)
     @images_replica = @product.attached_images.find_all_by_replica(true)
-    @products = Product.where("type_id = ? AND style_id = ?", @product.type, @product.style).limit(5)
+    @products = Product.where("type_id = ? AND style_id = ? AND id != ?", @product.type, @product.style, @product).limit(5)
     @types = Type.all
     @review = rand(1..2)
     @review_images = Dir.glob("app/assets/images/reviews/#{@review}/*")

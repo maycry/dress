@@ -8,7 +8,7 @@ class Product < ActiveRecord::Base
 	accepts_nested_attributes_for :attached_images, :type, :allow_destroy => true
 	accepts_nested_attributes_for :type, :reject_if => proc { |attributes| attributes['name'].blank? }
 	attr_accessible :name, :attached_images_attributes, :price, :code, :type_id, :style_id, :designer_id, :selection_id, :description
-	paginates_per 15
+	paginates_per 20
 
 	def autoname
 		"#{self.type.productname} #{self.style.name.mb_chars.downcase} #{self.designer.name}"
@@ -32,4 +32,9 @@ class Product < ActiveRecord::Base
 			"" 
 		end
 	end
+
+	def to_param
+    "#{self.id}-#{self.code.parameterize}"
+  end
+
 end
