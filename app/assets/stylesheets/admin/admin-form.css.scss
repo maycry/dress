@@ -74,7 +74,7 @@ label{
 		}
 	}
 	.input_action{
-		margin-top: 20px;
+		margin-top: 40px;
 		padding: 20px 0 20px 15%;
 		background-color: #ddd;
 	}
@@ -118,10 +118,11 @@ ul.ui-autocomplete {
       padding: 3px;
       text-decoration: none;
     }
-    &:hover{
-      background-color: #FFFCB2;
-    }
   }
+}
+.ui-menu .ui-menu-item a.ui-state-focus,
+.ui-menu .ui-menu-item a.ui-state-active {
+	background-color: #FFFCB2;
 }
 .ui-helper-hidden-accessible{
 	display: none;

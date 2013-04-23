@@ -38,6 +38,8 @@ jQuery(document).ready(function($) {
 	$(document).mousemove(
 	  function(e){
 	    var el = $(e.target);
+
+	   if (bimgW<450) return
 	   
 		if(isZoom) {
 			zoom.css("background-position-x", getX(e.pageX));

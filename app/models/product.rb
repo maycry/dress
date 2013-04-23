@@ -24,9 +24,9 @@ class Product < ActiveRecord::Base
 	  if search
 	    s = joins(:style, :designer).where("styles.name like ? OR designers.name like ?", "%#{search.mb_chars.capitalize.to_s}%", "%#{search}%")
 	    s = where("code like ?", "%#{search}%") if s.empty?
-	    s.page(page).per(31)
+	    s.order("created_at desc").page(page).per(31)
 	  else
-	    page(page).per(31)
+	    order("created_at desc").page(page).per(31)
 	  end
 	end
 
