@@ -2,7 +2,7 @@
 	<% @styles.each do |style| %>
 		<div class="b-product b-style">
 			<%= link_to type_style_url(@type, style) do %>
-				<%= image_tag style.image.url %>
+				<%= image_tag style.image.url, title: style.name, alt: "Платья в стиле #{style.name.mb_chars.downcase}" %>
 				<%= style.name %>
 			<% end %>
 		</div>

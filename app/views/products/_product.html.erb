@@ -1,6 +1,6 @@
 <div class="b-product <%= thumb %> ">
 	<%= link_to product_path(product) do %>
-		<%= image_tag product.attached_images.first.image.url(thumb)  unless product.attached_images.first.nil? %>
+		<%= image_tag(product.attached_images.first.image.url(thumb), alt: "#{product.autoname} #{product.code}", title: product.description ) unless product.attached_images.first.nil? %>
 		<%= product.autoname %>
 	<% end %>
 	<%= return_price(product.price) %>
