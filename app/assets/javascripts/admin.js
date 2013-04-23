@@ -3,6 +3,12 @@ jQuery(document).ready(function($) {
 		source: $('#search').data("s")
 	});
 
+	$('.image .delete').click(function(){
+		$(this).prev().children("input").val("true");
+		$(this).parent().hide();
+		return false
+	});
+
 	var description = $("#product_description")
 	var style_select = $("#product_style_id_input select");
 	var samplesList = [

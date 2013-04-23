@@ -1,3 +1,5 @@
+#!/bin/env ruby
+# encoding: utf-8
 class Product < ActiveRecord::Base
 	has_many :attached_images, :dependent => :destroy
 	belongs_to :type
@@ -11,7 +13,11 @@ class Product < ActiveRecord::Base
 	paginates_per 20
 
 	def autoname
-		"#{self.type.productname} #{self.style.name.mb_chars.downcase} #{self.designer.name}"
+		if self.designer.name == "Другие"
+			"#{self.type.productname} #{self.style.name.mb_chars.downcase}"
+		else
+			"#{self.type.productname} #{self.style.name.mb_chars.downcase} #{self.designer.name}"
+		end
 	end
 
 	def self.search(search, page)
