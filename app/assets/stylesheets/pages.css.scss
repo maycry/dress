@@ -3,9 +3,6 @@ article {
 	.wrapper{
 		overflow: auto;
 	}
-	section{
-		overflow: auto;
-	}
 	small{
 		font-size: 14px;
 		line-height: 18px;
@@ -176,7 +173,7 @@ article {
 	/*-----Shipping------*/
 	&.p-shipping{
 		section{
-			overflow: initial;
+			overflow: visible;
 		}
 	}
 
