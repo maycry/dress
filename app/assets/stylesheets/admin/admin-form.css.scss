@@ -1,7 +1,8 @@
+@import "shared";
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
 	background-color: #ffffff;
 	border: 1px solid #cccccc;
-	width: 350px;
+	width: 30%;
 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -40,7 +41,7 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 	}
 }
 select{
-	width: 364px;
+	width: 31%;
 }
 .select *{
 	vertical-align: 5px;
@@ -50,14 +51,19 @@ select{
 }
 label{
 	display: inline-block;
-	width: 160px;
+	width: 15%;
 	text-align: right;
 	margin-right: 15px;
 	vertical-align: 5px;
 }
 .admin-content{
 	h1, h3, .images-control, .input_action{
-		padding-left: 175px;
+		padding-left: 15%;
+		margin-left: 32px;
+	}
+	h3{
+		padding-left: 15%;
+		margin-left: 35px;
 	}
 	h3{
 		margin-top: 24px;
@@ -69,7 +75,7 @@ label{
 	}
 	.input_action{
 		margin-top: 20px;
-		padding: 20px 0 20px 175px;
+		padding: 20px 0 20px 15%;
 		background-color: #ddd;
 	}
 	.images-control{
@@ -119,4 +125,35 @@ ul.ui-autocomplete {
 }
 .ui-helper-hidden-accessible{
 	display: none;
+}
+#product_description_input{
+	#product_description{
+		display: inline-block;
+		vertical-align: top;
+	}
+	label{
+		vertical-align: top;
+	}
+	.samples{
+		display: inline-block;
+		width: 52%;
+		.samples-1, .samples-2 ,.samples-3{
+			width: 33%;
+			padding-left: 2%;
+			display: inline-block;
+			vertical-align: top;
+		}
+		a{
+			margin-right: 7px;
+			text-decoration: none;
+			font-size: 13px;
+			line-height: 15px;
+			margin-bottom: 3px;
+			display: block;
+			color: black;
+			&:hover{
+				background-color: #eee;
+			}
+		}
+	}
 }
