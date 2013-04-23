@@ -95,3 +95,8 @@
 .clr{
 	clear: both;
 }
+.clr:after{
+	content: "";
+	display: block;
+	clear: both;
+}

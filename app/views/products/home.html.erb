@@ -2,11 +2,10 @@
 <%= description "Мейкмайдресс — место, где вы можете заказть свадебное или вечернее платье в Киеве, сшитое по вашим меркам." %>
 <%= render 'b-slider' %>
 <%= render 'b-type-chooser' %>
-<section class="products-list">
+<section class="products-list clr">
 	<%= render 'shared/b-styles' %>
 	<%= render @products, thumb: :thumb5 %>
 	<%= render 'shared/b-nexter', :text => "Выбрать свадебное платье" %>
 </section>
-<div class="clr"></div>
 <%= render 'shared/b-review' %>
 <%= render 'shared/b-taglines', :parent => "home" %>
