@@ -1,6 +1,6 @@
 <div class="photo loading">
 	<div class="zoom"></div>
-	<%= image_tag images_original.first.image.url, alt: "#{product.autoname} #{product.code}", title: product.description, data: {width: images_original.first.width, height: images_original.first.height} %>
+	<%= image_tag images_original.first.image.url, alt: "#{product.autoname} #{product.code}", data: {width: images_original.first.width, height: images_original.first.height} %>
 </div>
 
 <% if (images_original.count + images_replica.count) > 1%>
