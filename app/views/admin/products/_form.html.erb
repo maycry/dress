@@ -3,7 +3,7 @@
     <%= f.input :type_id,       :as => :select, :collection => Type.find(:all), :include_blank => false %>
     <%= f.input :style_id,      :as => :select, :collection => Style.find(:all) %>
     <%= f.input :designer_id,   :as => :select, :collection => Designer.find(:all) %>
-    <%= f.input :year,          :as => :select, :collection => [2012, 2013]  %>
+    <%= f.input :year,          :as => :select, :collection => ["2012", "2013"]  %>
     <%= f.input :selection_id,  :as => :select, :collection => Selection.find(:all), label: "Set" %>
     <%= f.input :description,   :wrapper_html => { :class => "clr" } %>
     <%= f.input :code %>
