@@ -17,10 +17,10 @@ class OrdersController < ApplicationController
 
     if @order.save
       redirect_to complete_path
-=begin
+
       OrderMailer.order_complete(@order, @product, "byorickq@gmail.com").deliver
       OrderMailer.order_complete(@order, @product, "bykova.catia@gmail.com").deliver
-=end
+
       session[:name]  ||= @order.name 
       session[:phone] ||= @order.phone
       session[:email] ||= @order.email 
