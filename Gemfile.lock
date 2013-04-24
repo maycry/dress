@@ -64,7 +64,6 @@ GEM
     eventmachine (1.0.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    fastimage (1.3.0)
     formtastic (2.2.1)
       actionpack (>= 3.0)
     hike (1.2.1)
@@ -165,7 +164,6 @@ DEPENDENCIES
   client_side_validations-formtastic
   coffee-rails (~> 3.2.1)
   debugger
-  fastimage
   formtastic
   jquery-rails
   kaminari

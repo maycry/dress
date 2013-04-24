@@ -21,12 +21,4 @@ class AttachedImage < ActiveRecord::Base
 		self.width = geo.width
 		self.height = geo.height
 	end
-
-	def width
-		FastImage.size(self.image.url)[0]
-	end
-
-	def height
-		FastImage.size(self.image.url)[1]
-	end
 end
