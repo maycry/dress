@@ -158,3 +158,18 @@ ul.ui-autocomplete {
 		}
 	}
 }
+form.order{
+	.dimensions{
+		width: 30%;
+		padding-left: 15%;
+		table{
+			margin-left: 36px;
+			tr{
+				td:last-child{
+					text-align:right;
+				}
+			}
+		}
+	}
+
+}

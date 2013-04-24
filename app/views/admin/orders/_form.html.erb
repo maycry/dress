@@ -1,7 +1,29 @@
 <%= semantic_form_for [:admin, @order], :html => {:multipart => true} do |f| %>
 	<%= link_to "Go to product", edit_admin_product_path(@order.product_id) %>
-  <%= f.inputs :name%>
-  <%= f.inputs :phone%>
-  <%= f.inputs :email%>
+  <%= f.inputs :name, :phone, :email%>
+    <h3>Размеры</h3>
+    <div class="dimensions">
+      <table>
+        <tr><td>Бюст</td><td><%= @order.dimensions[:m_1] %></td></tr>
+        <tr><td>Талия</td><td><%= @order.dimensions[:m_2] %></td></tr>
+        <tr><td>Бедра</td><td><%= @order.dimensions[:m_3] %></td></tr>
+        <tr><td>Верхний бюст</td><td><%= @order.dimensions[:m_4] %></td></tr>
+        <tr><td>Нижний бюст</td><td><%= @order.dimensions[:m_5] %></td></tr>
+        <tr><td>Грудь</td><td><%= @order.dimensions[:m_6] %></td></tr>
+        <tr><td>Плечо-бюст</td><td><%= @order.dimensions[:m_7] %></td></tr>
+        <tr><td>Плечо-талия</td><td><%= @order.dimensions[:m_8] %></td></tr>
+        <tr><td>Талия-пол</td><td><%= @order.dimensions[:m_9] %></td></tr>
+        <tr><td>Обхват плеча</td><td><%= @order.dimensions[:m_10] %></td></tr>
+        <tr><td>Плечи</td><td><%= @order.dimensions[:m_11] %></td></tr>
+        <tr><td>Шея</td><td><%= @order.dimensions[:m_12] %></td></tr>
+        <tr><td>Длина руки</td><td><%= @order.dimensions[:m_13] %></td></tr>
+        <tr><td>Бицепс</td><td><%= @order.dimensions[:m_14] %></td></tr>
+        <tr><td>Рука верх</td><td><%= @order.dimensions[:m_15] %></td></tr>
+        <tr><td>Рука снизу</td><td><%= @order.dimensions[:m_16] %></td></tr>
+        <tr><td>Плечи-пол</td><td><%= @order.dimensions[:m_17] %></td></tr>
+        <tr><td>Каблуки</td><td><%= @order.dimensions[:m_18] %></td></tr>
+      </table>
+    </div>
+  
   <%= f.actions%>
 <% end %>
