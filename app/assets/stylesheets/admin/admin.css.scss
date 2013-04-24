@@ -55,6 +55,19 @@ body,html{
 			color: white;
 		}
 	}
+	.icon-off:after{
+		content: "";
+		position: absolute;
+		display: block;
+		width: 12px;
+		height: 13px;
+		margin-top: 1px;
+		opacity: 0.5;
+		background: image_url("icons/off.png") no-repeat;
+	}
+	.icon-off:hover:after{
+		opacity: 0.7;
+	}
 }
 .admin-content{
 	box-sizing: border-box;
