@@ -6,7 +6,18 @@ jQuery(document).ready(function($) {
 	$('.image .delete').click(function(){
 		$(this).prev().children("input").val("true");
 		$(this).parent().hide();
-		return false
+		return false;
+	});
+
+	$('.sizes li input').focus(function(){
+		$('.measure-instractions').css('background-position-x', -(($(this).data('number')-1)*210));
+	});
+
+	$('.sizes legend').click(function(){
+		$('.sizes ol').toggle();
+		temp = $(this).children('span').html();
+		$(this).children('span').html($('.sizes').data('later'));
+		$('.sizes').data('later', temp);
 	});
 
 	var description = $("#product_description")
