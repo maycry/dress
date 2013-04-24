@@ -6,12 +6,13 @@
 			<%= image_tag @product.attached_images.first.image.url, data: {width: @product.attached_images.first.width, height: @product.attached_images.first.height} %>
 		</div>
 	</div>
-	<div class="col-1-2">
+	<div class="col-1-2 b-order">
 		<h1><%= @product.autoname %></h1>
 		<div class="description">
 			<p><%= @product.description %></p>
 		</div>
 		<%= render 'form' %>
+
 	</div>
 </section>
 <div class="clr"></div>

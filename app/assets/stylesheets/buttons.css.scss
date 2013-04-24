@@ -58,26 +58,93 @@ $btnc : #fff1de;
 
 .b-product-about{
 	form{
+		legend{
+			display: block;
+			padding: 20px 0 10px;
+			font-size: 24px;
+			line-height: 32px;
+			font-weight: bold;
+		}
+		label{
+			text-align: left;
+			width: 100px;
+		}
+		input{
+			outline: none;
+			border-radius: 0;
+		}
 		.under-form{
 			font-size: 14px;
 			color: #999;
 			line-height: 21px;
-			padding-left: 120px;
 			padding-right: 20px;
+			width: 80%;
+			padding-top: 5px;
 		}
-		padding-top: 10px;
 		li{
 			padding-top: 15px;
 			margin-left: 0;
 			input[type="text"], input[type="tel"], input[type="email"]{
 				width: 70%;
 			}
-			label{
-				width: 100px;
+		}
+		.sizes{
+			position: relative;
+			legend{
+				cursor: pointer;
+				display: block;
+				color: $link-color;
+				margin: 30px 0 13px;
+				span{
+					border-bottom: 1px dotted $link-color;
+				}
+			}
+			li{
+				padding: 0;
+				margin: 0;
+				margin-left: 0;
+				display: block;
+				&:after{
+					content: "см";
+					position: absolute;
+					margin-left: -23px;
+					margin-top: 5px;
+					color: #999;
+				}
+				label{
+					float: left;
+				}
+				input{
+					border-top: none;
+					margin-bottom: 0;
+					border-top: none;
+					width: 15%;
+					padding-right: 25px;
+					text-align: right;
+					box-shadow: 0 1px 2px rgba(black, 0.1) inset;
+
+				}
+				&:first-child input{
+					border-top: 1px solid #ccc;
+				}
+			}
+			.measure-instractions{
+				position: absolute;
+				top: 50px;
+				width: 210px;
+				height: 480px;
+				margin-left: 52%;
+				margin-top: 30px;
+				background: image_url("measures.png") 0 0 no-repeat;
+				.text{
+					position: absolute;
+					bottom: 0;
+				}
 			}
 		}
+
 		.buy-wrapper{
-			margin-top: 30px;
+			margin-top: 40px;
 			background-color: $buy-wrapper-color;
 			border: solid 3px $buy-wrapper-d7color;
 			padding: 5px 20px 20px 113px;

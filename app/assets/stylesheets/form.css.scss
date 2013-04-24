@@ -1,0 +1,17 @@
+@import "shared";
+.b-order{
+	legend{
+		display: block;
+		padding: 25px 0 5px;
+		font-size: 24px;
+		line-height: 32px;
+		font-weight: bold;
+	}
+	label{
+		text-align: left;
+	}
+	input{
+		outline: none;
+		border-radius: 0;
+	}
+}

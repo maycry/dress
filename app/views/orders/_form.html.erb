@@ -1,10 +1,36 @@
 <%= semantic_form_for @order, :validate => true, :url => { :action => "create" } do |f| %>
-	<%= f.inputs do %>
+	<%= f.inputs name: "Контактные данные" do %>
 	  <%= f.input :name, :label => "Ваше имя", :validate => { :presence => true }, :required => false %>
 	  <%= f.input :phone, :label => "Телефон", :validate => { :presence => true }, :required => false  %>
 	  <%= f.input :email, :label => "Имейл" %>
 	  <%= f.input :product_id, as: 'hidden', value: params[:product_id] %>
 	  <p class="under-form">Все указанные данные, используются только для уточнения заказа и не будут разглашаться третьим лицам.</p>
+  <% end %>
+	<%= f.inputs name: "Указать размеры", class: "sizes" do %>
+	  <%= f.input :name, :label => "Ваше имя", :validate => { :presence => true }, :required => false %>
+	  <%= f.input :name, :label => "Ваше имя", :validate => { :presence => true }, :required => false %>
+	  <%= f.input :name, :label => "Ваше имя", :validate => { :presence => true }, :required => false %>
+	  <%= f.input :name, :label => "Ваше имя", :validate => { :presence => true }, :required => false %>
+	  <%= f.input :name, :label => "Ваше имя", :validate => { :presence => true }, :required => false %>
+	  <%= f.input :name, :label => "Ваше имя", :validate => { :presence => true }, :required => false %>
+	  <%= f.input :name, :label => "Ваше имя", :validate => { :presence => true }, :required => false %>
+	  <%= f.input :name, :label => "Ваше имя", :validate => { :presence => true }, :required => false %>
+	  <%= f.input :name, :label => "Ваше имя", :validate => { :presence => true }, :required => false %>
+	  <%= f.input :name, :label => "Ваше имя", :validate => { :presence => true }, :required => false %>
+	  <%= f.input :name, :label => "Ваше имя", :validate => { :presence => true }, :required => false %>
+	  <%= f.input :name, :label => "Ваше имя", :validate => { :presence => true }, :required => false %>
+	  <%= f.input :name, :label => "Ваше имя", :validate => { :presence => true }, :required => false %>
+	  <%= f.input :name, :label => "Ваше имя", :validate => { :presence => true }, :required => false %>
+	  <%= f.input :name, :label => "Ваше имя", :validate => { :presence => true }, :required => false %>
+	  <%= f.input :name, :label => "Ваше имя", :validate => { :presence => true }, :required => false %>
+	  <%= f.input :name, :label => "Ваше имя", :validate => { :presence => true }, :required => false %>
+	  <%= f.input :name, :label => "Ваше имя", :validate => { :presence => true }, :required => false %>
+	  <%= content_tag :div, "", class: "measure-instractions" do%>
+	  	<div class="text">
+		  	<h4>Обхват шеи</h4>
+		  	<p>Все указанные данные, используются только для уточнения заказа и не будут разглашаться третьим лицам.</p>
+	  	</div>
+	  <% end %>
   <% end %>
   <%= content_tag :div, class: "buy-wrapper" do %>
 	  <%= f.actions do %>
