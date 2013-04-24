@@ -6,6 +6,7 @@ jQuery(document).ready(function($) {
 	var zoom = $(".zoom");
 	var isZoom = false;
 	var isLoading = true;
+	$(".photo").addClass('loading');
 
 	$(".photo img").load(function(){
 		isLoading = false;
