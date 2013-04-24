@@ -11,8 +11,16 @@ class AttachedImage < ActiveRecord::Base
 		:url  => "/products/:product_id/:style/:basename.:extension",
 		:path => "/products/:product_id/:style/:basename.:extension",
 		:storage => :s3,
-	    :s3_credentials => S3_CREDENTIALS
+	  :s3_credentials => S3_CREDENTIALS
 	attr_accessible :image, :image_file_name, :replica
+
+	after_post_process :save_image_dimensions
+
+	def save_image_dimensions
+		geo = Paperclip::Geometry.from_file(image.queued_for_write[:original])
+		self.width = geo.width
+		self.height = geo.height
+	end
 
 	def width
 		FastImage.size(self.image.url)[0]

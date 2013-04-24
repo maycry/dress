@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130423160501) do
+ActiveRecord::Schema.define(:version => 20130424073910) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string    "resource_id",   :null => false
@@ -55,6 +55,8 @@ ActiveRecord::Schema.define(:version => 20130423160501) do
     t.timestamp "image_updated_at"
     t.integer   "product_id"
     t.boolean   "replica",            :default => false
+    t.integer   "width"
+    t.integer   "height"
   end
 
   create_table "designers", :force => true do |t|
