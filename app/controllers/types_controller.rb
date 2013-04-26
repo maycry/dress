@@ -6,7 +6,5 @@ class TypesController < ApplicationController
     @designers = Designer.all
     @styles = Style.all
     @selections = Selection.all
-    @image1 = Product.selection_image(@selections.first)
-    @image2 = Product.selection_image(@selections.last)
   end
 end

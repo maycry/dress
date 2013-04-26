@@ -1,0 +1,27 @@
+<section class="b-tizers">
+	<%= @selection ? content_tag(:h1, @selection.name, class: "set") : (render('products/b-tizer') if @type.id ==1) %>
+</section>
+<%= render('products/b-categories', type: type, designers: designers, styles: styles) if (@type.id == 1 && !@selection) %>
+<section class="products-list clr">
+<% k = @products_year.keys
+if k.include?(nil)
+	k.compact!.sort!
+	k.unshift(nil)
+else
+	k.sort!
+end
+
+ %>
+<% k.reverse_each do |year| %>
+	<%= content_tag :h4, "Коллекция #{year} года" unless year.nil? %> 
+	<%= content_tag :h4, "Остальные коллекции" if year.nil? && k.count > 1 %> 
+	<% for product in @products_year[year] %><div class="b-product <%= thumb %> ">
+			<%= link_to product_path(product) do %>
+				<%= image_tag(product.attached_images.first.image.url(thumb), alt: "#{product.autoname} #{product.code}", title: product.description ) unless product.attached_images.first.nil? %>
+				<%= product.autoname %>
+			<% end %>
+			<%= return_price(product.price) %></div><% end %>
+<% end %>
+
+<%= render 'shared/b-nexterp', :text => "Листать дальше" %>
+</section>

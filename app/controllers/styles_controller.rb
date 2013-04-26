@@ -7,7 +7,5 @@ class StylesController < ApplicationController
     @styles = Style.all
     @products = Product.order("created_at desc").where("style_id = ?", @style).page params[:page]
     @selections = Selection.all
-    @image1 = Product.selection_image(@selections.first)
-    @image2 = Product.selection_image(@selections.last)
   end
 end
