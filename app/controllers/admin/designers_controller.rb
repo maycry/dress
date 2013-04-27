@@ -3,7 +3,7 @@ class Admin::DesignersController < AdminController
   # GET /products.json
 
   def index
-    @designers = Designer.all
+    @designers = Designer.order("name")
 
     respond_to do |format|
       format.html # index.html.erb

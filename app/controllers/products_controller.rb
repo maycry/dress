@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @designers = Designer.all
+    @designers = Designer.order("name")
     @styles = Style.all
     @types = Type.all
 
