@@ -10,6 +10,7 @@
 	img{
 		margin-bottom: 4px;
 		max-width: 100%;
+		display: block;
 	}
 	.price{
 		font-size: 15px;
@@ -22,5 +23,7 @@
 	&.thumb4{
 		width: 25%;
 		padding-top: 20px;
+	}
+	&.thumb5{
 	}
 }
