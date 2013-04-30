@@ -1,4 +1,4 @@
-<div class="b-product <%= thumb %> ">
+<div class="b-product <%= thumb %><%= ' in-stock' if product.selection_id == 2 %>">
 	<%= link_to product_path(product) do %>
 		<%= image_tag(product.attached_images.first.image.url(thumb), alt: "#{product.autoname} #{product.code}", title: product.description ) unless product.attached_images.first.nil? %>
 		<%= product.autoname %>

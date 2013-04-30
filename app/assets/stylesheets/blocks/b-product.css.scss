@@ -4,6 +4,18 @@
 	line-height: 20px;
 	display: inline-block;
 	vertical-align: top;
+	position: relative;
+	&.in-stock:after{
+		content: "В наличии";
+		position: absolute;
+		background-color: #ff5b59;
+		display: block;
+		top:30px;
+		font-size: 14px;
+		padding: 0 5px;
+		margin-left: -5px;
+		color: white;
+	}
 	a{
 		font-size: 15px;
 	}
