@@ -6,6 +6,7 @@ jQuery(document).ready(function($) {
 	var zoom = $(".zoom");
 	var isZoom = false;
 	var isLoading = true;
+
 	setTimeout(function(){
 		$(".photo").removeClass('loading');
 	}, 2000);
@@ -13,8 +14,6 @@ jQuery(document).ready(function($) {
 	$(".photo img").load(function(){
 		isLoading = false;
 		$(".photo").removeClass('loading');
-	});
-	$(".thumbs img").first().load(function(){
 		mainImg = $(".photo img")
 		$(".zoom").css("background-image", "url(" + mainImg.attr("src") + ")")
 		bimgW = mainImg.data("width");

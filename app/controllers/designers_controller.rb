@@ -5,7 +5,7 @@ class DesignersController < ApplicationController
     @types = Type.all
     @styles = Style.all
     @designers = Designer.order("name")
-    @products = Product.order("created_at desc").where("designer_id = ?", @designer).page params[:page]
+    @products = Product.order("created_at desc").where("designer_id = ? AND type_id = ?", @designer, @type).page params[:page]
     @products_year = @products.group_by(&:year)
     @selections = Selection.all
   end

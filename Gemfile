@@ -36,6 +36,8 @@ gem 'aws-sdk', '~> 1.5.7'
 gem 'bcrypt-ruby', '~> 3.0.0', :require => "bcrypt"
 gem 'kaminari'
 gem 'active_link_to'
+gem 'redcarpet', '~> 2.2.0'
+gem "jquery-fileupload-rails"
 
 gem 'formtastic'
 gem 'client_side_validations'

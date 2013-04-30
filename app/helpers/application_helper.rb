@@ -30,8 +30,14 @@ module ApplicationHelper
 	def title(page_title)
 	  content_for :title, page_title.to_s
 	end
+
 	def description(page_description)
 	  content_for :meta_description, page_description.to_s
+	end
+
+	def markdown(text)
+		markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true, :hard_wrap => true, :filter_html => true, :no_intraemphasis => true, :gh_blockcode => true)
+		raw markdown.render(text)
 	end
 
 end

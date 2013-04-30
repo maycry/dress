@@ -1,0 +1,11 @@
+<%= semantic_form_for [:admin, @post], :html => {:multipart => true} do |f| %>
+  <%= f.inputs do %>
+  	<%= f.input :title %>
+  	<%= f.input :body %>
+  <% end %>
+  <table id="thumbs"></table>
+	<%= f.inputs for: :image_attributes do |ff| %>
+		<%= ff.input :image, as: :file, required: false, input_html: {multiple: true} %>
+	<% end %>
+  <%= f.actions%>
+<% end %>

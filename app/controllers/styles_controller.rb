@@ -5,7 +5,7 @@ class StylesController < ApplicationController
     @type = Type.find_by_alias!(params[:type_id])
     @designers = Designer.order("name")
     @styles = Style.all
-    @products = Product.order("created_at desc").where("style_id = ?", @style).page params[:page]
+    @products = Product.order("created_at desc").where("style_id = ? AND type_id = ?", @style, @type).page params[:page]
     @selections = Selection.all
   end
 end

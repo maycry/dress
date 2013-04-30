@@ -13,7 +13,10 @@ Dress::Application.routes.draw do
   resources :sitemap
 
   namespace :admin do
-    resources :products, :types, :styles, :designers, :selections, :orders 
+    resources :products, :types, :styles, :designers, :selections, :orders
+    resources :posts do
+      get 'upload', :on => :collection
+    end
   end
 
   resources :types, path: "" do
