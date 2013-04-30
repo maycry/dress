@@ -1,7 +1,9 @@
 class ProductsController < ApplicationController
 
   def home
-    @products = Product.order("created_at desc").page(1)
+    @products_1 = Product.order("created_at desc").where("type_id = ?", 1).limit 10
+    @products_2 = Product.order("created_at desc").where("type_id = ?", 2).limit 10
+    @products = Product.order("created_at desc").limit 10
     @types = Type.all
     @type = Type.first
     @styles = Style.all

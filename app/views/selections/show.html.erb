@@ -1,2 +1,3 @@
 <%= title "#{@selection.name}" %>
+<%= content_tag :h1, @selection.name, class: "set" %>
 <%= render 'shared/catalog', products: @products, type: @type, designers: @designers, styles: @styles, thumb: :thumb4 %>

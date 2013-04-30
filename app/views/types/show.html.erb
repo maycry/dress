@@ -1,5 +1,3 @@
 <%= title @type.name %>
-<section class="b-tizers">
-	<%= render 'products/b-tizer' if @type.id == 1 %>
-</section>
+<%= render 'products/b-tizer' if @type.id == 1 %>
 <%= render 'shared/catalog', products: @products, type: @type, designers: @designers, styles: @styles, thumb: :thumb5, border: "" %>
