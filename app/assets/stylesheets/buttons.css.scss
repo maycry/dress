@@ -94,9 +94,10 @@ $btnc : #fff1de;
 				cursor: pointer;
 				display: block;
 				color: $link-color;
-				margin: 30px 0 13px;
+				padding: 25px 0 13px;
 				span{
 					border-bottom: 1px dotted $link-color;
+
 				}
 			}
 			ol{
@@ -112,21 +113,28 @@ $btnc : #fff1de;
 					content: "см";
 					position: absolute;
 					margin-left: -23px;
-					margin-top: 4px;
+					margin-top: 11px;
 					color: #999;
+					font-size: 14px;
 				}
 				label{
-					float: left;
+					display: inline-block;
+					font-size: 14px;
+					width: 25%;
+					margin-top: 11px;
 				}
 				input{
 					border: none;
 					margin-bottom: 7px;
 					border-bottom: 1px dotted #ccc;
-					width: 15%;
+					width: 10%;
 					padding-right: 25px;
 					text-align: right;
 					box-shadow: none;
 					padding-bottom: 0;
+					display: inline-block;
+					vertical-align: top;
+					margin-top: 5px;
 				}
 
 			}
@@ -136,7 +144,7 @@ $btnc : #fff1de;
 				width: 210px;
 				height: 480px;
 				margin-left: 52%;
-				margin-top: 30px;
+				margin-top: 40px;
 				background: image_url("measures.png") 0 0 no-repeat;
 				.text{
 					position: absolute;

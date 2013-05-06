@@ -15,6 +15,7 @@ jQuery(document).ready(function($) {
 
 	$('.sizes legend').click(function(){
 		$('.sizes ol').toggle();
+		$('.sizes ol li input').first().focus();
 		temp = $(this).children('span').html();
 		$(this).children('span').html($('.sizes').data('later'));
 		$('.sizes').data('later', temp);

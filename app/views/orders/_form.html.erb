@@ -6,32 +6,32 @@
 	  <%= f.input :product_id, as: 'hidden', value: params[:product_id] %>
 	  <p class="under-form">Все указанные данные, используются только для уточнения заказа и не будут разглашаться третьим лицам.</p>
   <% end %>
-	<%= f.inputs name: "Указать размеры", class: "sizes", data: {later: "Уточнить размеры позже"} do %>
+	<%= f.inputs name: "Указать размеры", class: "sizes", data: {later: "Указать размеры позже"} do %>
 	  <%= f.semantic_fields_for :dimensions, @order.dimensions do |ff| %>
-	  	<%= ff.input :m_1, label:  "Бюст", :required => false, input_html: {data: {number: "1"}} %>
-	  	<%= ff.input :m_2, label:  "Талия", :required => false, input_html: {data: {number: "2"}} %>
-	  	<%= ff.input :m_3, label:  "Бедра", :required => false, input_html: {data: {number: "3"}} %>
-	  	<%= ff.input :m_4, label:  "Верхний бюст", :required => false, input_html: {data: {number: "4"}} %>
-	  	<%= ff.input :m_5, label:  "Нижний бюст", :required => false, input_html: {data: {number: "5"}} %>
-	  	<%= ff.input :m_6, label:  "Грудь", :required => false, input_html: {data: {number: "6"}} %>
-	  	<%= ff.input :m_7, label:  "Плечо-бюст", :required => false, input_html: {data: {number: "7"}} %>
-	  	<%= ff.input :m_8, label:  "Плечо-талия", :required => false, input_html: {data: {number: "8"}} %>
-	  	<%= ff.input :m_9, label:  "Талия-пол", :required => false, input_html: {data: {number: "9"}} %>
-	  	<%= ff.input :m_10, label: "Обхват плеча", :required => false, input_html: {data: {number: "10"}} %>
-	  	<%= ff.input :m_11, label: "Плечи", :required => false, input_html: {data: {number: "11"}} %>
-	  	<%= ff.input :m_12, label: "Шея", :required => false, input_html: {data: {number: "12"}} %>
-	  	<%= ff.input :m_13, label: "Длина руки", :required => false, input_html: {data: {number: "13"}} %>
-	  	<%= ff.input :m_14, label: "Бицепс", :required => false, input_html: {data: {number: "14"}} %>
-	  	<%= ff.input :m_15, label: "Рука верх", :required => false, input_html: {data: {number: "15"}} %>
-	  	<%= ff.input :m_16, label: "Рука снизу", :required => false, input_html: {data: {number: "16"}} %>
-	  	<%= ff.input :m_17, label: "Плечи-пол", :required => false, input_html: {data: {number: "17"}} %>
-	  	<%= ff.input :m_18, label: "Каблуки", :required => false, input_html: {data: {number: "18"}} %>
+	  	<%= ff.input :m_1, label:  "Обхват груди", :required => false, input_html: {data: {number: "1", instructions: "Измерьте длина вокруг самой полной части бюста."}} %>
+	  	<%= ff.input :m_2, label:  "Обхват талии", :required => false, input_html: {data: {number: "2", instructions: "Измерьте длина вокруг самой тонкой части фигуры."}} %>
+	  	<%= ff.input :m_3, label:  "Обхват бедер", :required => false, input_html: {data: {number: "3"}} %>
+	  	<%= ff.input :m_4, label:  "Обхват верхней части бюста", :required => false, input_html: {data: {number: "4"}} %>
+	  	<%= ff.input :m_5, label:  "Обхват нижней части бюста", :required => false, input_html: {data: {number: "5"}} %>
+	  	<%= ff.input :m_6, label:  "Расстояние между центрами груди", :required => false, input_html: {data: {number: "6"}} %>
+	  	<%= ff.input :m_7, label:  "Расстояние от плеча к центру груди", :required => false, input_html: {data: {number: "7"}} %>
+	  	<%= ff.input :m_8, label:  "Расстояние от плеча до талии", :required => false, input_html: {data: {number: "8"}} %>
+	  	<%= ff.input :m_9, label:  "Расстояние от талии до пола", :required => false, input_html: {data: {number: "9"}} %>
+	  	<%= ff.input :m_10, label: "Обхват рукова", :required => false, input_html: {data: {number: "10"}} %>
+	  	<%= ff.input :m_11, label: "Расстояние между плечами", :required => false, input_html: {data: {number: "11"}} %>
+	  	<%= ff.input :m_12, label: "Обхват шеи", :required => false, input_html: {data: {number: "12"}} %>
+	  	<%= ff.input :m_13, label: "Длина рукава", :required => false, input_html: {data: {number: "13"}} %>
+	  	<%= ff.input :m_14, label: "Обхват бицепса", :required => false, input_html: {data: {number: "14"}} %>
+	  	<%= ff.input :m_15, label: "Длина верхней части руки", :required => false, input_html: {data: {number: "15"}} %>
+	  	<%= ff.input :m_16, label: "Длина нижней части руки", :required => false, input_html: {data: {number: "16"}} %>
+	  	<%= ff.input :m_17, label: "Расстояние от плеча до пола", :required => false, input_html: {data: {number: "17"}} %>
+	  	<%= ff.input :m_18, label: "Высота каблука", :required => false, input_html: {data: {number: "18"}} %>
 	  <% end %>
 	  <%= content_tag :div, "", class: "measure-instractions" do%>
-	  	<div class="text">
+	  	<!-- <div class="text">
 		  	<h4>Обхват шеи</h4>
 		  	<p>Все указанные данные, используются только для уточнения заказа и не будут разглашаться третьим лицам.</p>
-	  	</div>
+	  	</div> -->
 	  <% end %>
   <% end %>
   <%= content_tag :div, class: "buy-wrapper" do %>
