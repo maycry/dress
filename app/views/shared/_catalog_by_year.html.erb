@@ -10,7 +10,7 @@ end
 
  %>
 <% k.reverse_each do |year| %>
-	<%= content_tag :h4, "Коллекция #{year} года" unless year.nil? %> 
+	<%= content_tag :h4, "#{collection_name(year)} #{year} года" unless year.nil? %> 
 	<%= content_tag :h4, "Остальные коллекции" if year.nil? && k.count > 1 %> 
 	<% for product in @products_year[year] %><div class="b-product <%= thumb %> ">
 			<%= link_to product_path(product) do %>

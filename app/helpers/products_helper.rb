@@ -12,4 +12,13 @@ module ProductsHelper
 		content_tag :p, price, :class => "price"
 	end
 
+	def collection_name(year)
+		if year == "2014"
+			"Пре-коллекция"
+		else
+			"Коллекция"
+		end
+		
+	end
+
 end
