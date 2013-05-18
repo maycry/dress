@@ -7,8 +7,19 @@
 		cursor: pointer;
 		height: 109px;
 		background: center 0 no-repeat;
+		position: relative;
 		&:hover{
 			box-shadow: 0 0 0 5px $buy-wrapper-color inset;
+		}
+		&:after{
+			content: "";
+			position: absolute;
+			background: image_url("icons/magnify.png");
+			display: block;
+			width: 41px;
+			height: 42px;
+			left: 50%;
+			margin: 35px 0 0 -20px;
 		}
 	}
 	.review{
