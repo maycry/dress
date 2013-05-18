@@ -19,6 +19,10 @@ body.admin{
 			cursor: default;
 		}
 	}
+	.about-menu div:first-child{
+		background-color: #ff5b59;
+		border-radius: 2px;
+	}
 	.about-menu, .products-menu{
 		padding-top: 17px;
 		margin-left: -10px;
@@ -35,7 +39,7 @@ body.admin{
 				}
 			}
 		}
-		.active{
+		.active, &:first-child .active {
 			background-color: $buy-wrapper-color;
 			box-shadow: 0 1px 1px rgba(black, 0.2) inset;
 			border-radius: 3px;

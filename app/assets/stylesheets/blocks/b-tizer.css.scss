@@ -7,7 +7,11 @@
 		.image-pregnat{
 			height: 213px;
 			background: image_url("/assets/product-tizer.jpg") center center no-repeat;
-		}		
+		}	
+		.image-is{
+			height: 213px;
+			background: image_url("/assets/product-tizer1.jpg") center center no-repeat;
+		}	
 		&:hover .description{
 			border: solid 2px $buy-wrapper-color;
 			border-left: none;
