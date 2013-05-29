@@ -1,0 +1,15 @@
+<%= title @post.title %>
+</div>
+<section class="posts">
+    <article>
+        <div class="wrapper">
+            <section class="col-7-12 mar-l-25">
+                <header>
+                    <h1><%= @post.title %></h1>
+                </header>
+                <%= markdown @post.body %>
+            </section>
+        </div>
+    </article>
+</section>
+<div class="clr"></div>

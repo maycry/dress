@@ -1,0 +1,17 @@
+<%= title "Блог" %>
+</div>
+<section class="posts">
+    <% @posts.each do |post|%>
+        <article>
+            <div class="wrapper">
+                <section class="col-7-12 mar-l-25">
+                    <header>
+                        <h1><%=link_to post.title, post_path(post), class: "black-link" %></h1>
+                    </header>
+                    <%= markdown post.body %>
+                </section>
+            </div>
+        </article>
+    <% end %>
+</section>
+<div class="clr"></div>
