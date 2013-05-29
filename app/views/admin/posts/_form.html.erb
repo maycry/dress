@@ -3,7 +3,7 @@
   	<%= f.input :title %>
   	<%= f.input :body %>
   <% end %>
-  <table id="thumbs"></table>
+  <div id="thumbs"></div>
 	<%= f.inputs for: :image_attributes do |ff| %>
 		<%= ff.input :image, as: :file, required: false, input_html: {multiple: true} %>
 	<% end %>
