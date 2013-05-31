@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  before_filter :get_type
+  before_filter :get_all_types
 
   def quality
     
