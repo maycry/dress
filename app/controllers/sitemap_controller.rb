@@ -1,9 +1,7 @@
 class SitemapController < ApplicationController
+  before_filter :get_all_types, :get_all_styles, :get_all_selections, :get_all_designers
   def index
-  	@types = Type.all
   	@type = Type.first
-  	@styles = Style.all
-  	@designers = Designer.all
   	@products = Product.all
   	respond_to do |format|
       format.xml

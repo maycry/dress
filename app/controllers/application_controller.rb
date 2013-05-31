@@ -9,4 +9,12 @@ class ApplicationController < ActionController::Base
     @styles = Style.all
   end
 
+  def get_all_designers
+    @designers = Designer.all
+  end
+
+  def get_all_selections
+    @selections = Selection.all
+  end
+
 end
