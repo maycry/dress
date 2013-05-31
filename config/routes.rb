@@ -12,7 +12,7 @@ Dress::Application.routes.draw do
   resources :posts
 
   namespace :admin do
-    resources :products, :types, :styles, :designers, :selections, :orders
+    resources :products, :types, :styles, :designers, :selections, :orders, :reviews
     resources :posts do
       get 'upload', :on => :collection
     end

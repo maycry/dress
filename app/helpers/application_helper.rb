@@ -1,5 +1,10 @@
 module ApplicationHelper
 
+	def review_images
+		@review_images = Dir.glob("app/assets/images/reviews/#{@review.photo}/*")
+    return @review_images.each {|i| i.slice!("app/assets/images/")}
+	end
+
 	def nav_link(link_text, link_path)
 		inc = is_active_link? link_path, :inclusive
 		exc = is_active_link? link_path, :exclusive

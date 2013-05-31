@@ -4,12 +4,12 @@
 <%= render 'b-type-chooser' %>
 <section class="products-list clr">
 	<%= render 'shared/b-styles' %>
-	<%= render @products_1, thumb: :thumb5 %>
+	<%= render @products_wedding_dresses, thumb: :thumb5 %>
 	<%= render 'shared/b-nexter', :text => "Выбрать свадебное платье", :type => "svadebnyeplatya" %>
 </section>
 <section class="products-list clr hidden">
-	<%= render @products_2, thumb: :thumb5 %>
+	<%= render @products_evening_dresses, thumb: :thumb5 %>
 	<%= render 'shared/b-nexter', :text => "Выбрать вечернее платье", :type => "vechernieplatya" %>
 </section>
-<%= render 'shared/b-review' %>
+<%= render 'shared/b-reviews' %>
 <%= render 'shared/b-taglines', :parent => "home" %>

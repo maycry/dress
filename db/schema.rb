@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130429181801) do
+ActiveRecord::Schema.define(:version => 20130531194936) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string    "resource_id",   :null => false
@@ -78,10 +78,10 @@ ActiveRecord::Schema.define(:version => 20130429181801) do
   end
 
   create_table "posts", :force => true do |t|
-    t.string   "title"
-    t.text     "body"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string    "title"
+    t.text      "body"
+    t.timestamp "created_at", :null => false
+    t.timestamp "updated_at", :null => false
   end
 
   create_table "products", :force => true do |t|
@@ -96,6 +96,14 @@ ActiveRecord::Schema.define(:version => 20130429181801) do
     t.text      "description"
     t.integer   "selection_id"
     t.integer   "year"
+  end
+
+  create_table "reviews", :force => true do |t|
+    t.string   "reviewer_name"
+    t.text     "review_text"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "photo"
   end
 
   create_table "selections", :force => true do |t|

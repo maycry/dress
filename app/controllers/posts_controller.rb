@@ -1,12 +1,10 @@
 class PostsController < ApplicationController
-
+	before_filter :get_all_types
   def index
     @posts = Post.all
-    @types = Type.all
   end
 
   def show
     @post = Post.find(params[:id])
-    @types = Type.all
   end
 end

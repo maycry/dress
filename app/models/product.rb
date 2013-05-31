@@ -12,6 +12,9 @@ class Product < ActiveRecord::Base
 	attr_accessible :name, :attached_images_attributes, :price, :code, :type_id, :style_id, :designer_id, :selection_id, :description, :year
 	paginates_per 20
 
+	default_scope order("created_at desc")
+	scope :newest, lambda { |type_id| where("type_id = ?", type_id).limit 10}
+
 	def autoname
 		if self.designer.name == "Другие"
 			"#{self.type.productname} #{self.style.name.mb_chars.downcase}"

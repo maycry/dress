@@ -1,0 +1,12 @@
+<div class="b-popup f-q4 hidden">
+	<div class="close">×</div>
+	<div class="b-slider fotorama" data-width="100%" data-background="#222" data-zoomToFit="false" data-fitToWindowHeight="true" data-fitToWindowHeightMargin="0"> 
+		<% review_images.each do |image| %>
+			<%= image_tag image %>
+		<% end %>
+	</div>
+</div>
+<%= render 'shared/b-review', 
+					 reviewer_name: @review.reviewer_name, 
+					 review_text: @review.review_text,
+					 photo: @review.photo %>

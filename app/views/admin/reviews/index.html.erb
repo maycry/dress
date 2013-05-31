@@ -1,0 +1,13 @@
+<div class="admin-content">
+	<%= link_to "Add review", new_admin_review_path, class: "add-type" %>
+	<table>
+		<tbody>
+			<% @reviews.each do |review| %>
+				<tr><td><%= link_to "×", admin_review_path(review), :confirm => "Are you sure you want to delete #{review.reviewer_name}?", :method => :delete, :class => "delete" %><%= link_to review.reviewer_name, edit_admin_review_path(review) %></td></tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+
+
+
