@@ -19,5 +19,4 @@ class SessionsController < ApplicationController
 		session[:log_in] = nil
 		redirect_to root_url, :notice => "Logged out!"
 	end
-
 end

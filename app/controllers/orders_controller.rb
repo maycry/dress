@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   before_filter :get_all_types
+
   def new
     @order = Order.new
     @product = Product.find(params[:product_id])
@@ -17,5 +18,4 @@ class OrdersController < ApplicationController
       render "new"
     end
   end
-
 end

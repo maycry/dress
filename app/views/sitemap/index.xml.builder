@@ -15,14 +15,14 @@ xml.tag! 'urlset', 'xmlns' => 'http://www.sitemaps.org/schemas/sitemap/0.9' do
   end
   @styles.each do |style|
     xml.url {
-      xml.loc("http://#{request.host_with_port}#{type_style_path(@type, style)}")
+      xml.loc("http://#{request.host_with_port}#{type_style_path(@types.first, style)}")
       xml.priority(0.8)
       xml.changefreq("monthly")
     }
   end
   @designers.each do |designer|
     xml.url {
-      xml.loc("http://#{request.host_with_port}#{type_designer_path(@type, designer)}")
+      xml.loc("http://#{request.host_with_port}#{type_designer_path(@types.first, designer)}")
       xml.priority(0.8)
       xml.changefreq("monthly")
     }

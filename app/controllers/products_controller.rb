@@ -2,11 +2,9 @@ class ProductsController < ApplicationController
   before_filter :get_all_types
   before_filter :get_all_styles, except: [:show]
 
-
   def home
     @products_wedding_dresses = Product.newest(1)
     @products_evening_dresses = Product.newest(2)
-    @type = Type.first
     @review = Review.order("RANDOM()").first
   end
 
