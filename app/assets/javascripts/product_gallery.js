@@ -6,6 +6,7 @@ jQuery(document).ready(function($) {
 	var zoom = $(".zoom");
 	var isZoom = false;
 	var isLoading = true;
+	$(".thumb").eq(0).addClass("active");
 
 	setTimeout(function(){
 		$(".photo").removeClass('loading');
@@ -22,6 +23,7 @@ jQuery(document).ready(function($) {
 		yi = mainImg.offset().top;
 		imgW = 430;
 		imgH = Math.round(imgW*(bimgH/bimgW));
+
 	});
 	function getX(xs){
 		d = (bimgW-imgW)/imgW;

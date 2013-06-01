@@ -32,16 +32,16 @@
 		}
 		.thumbs{
 			overflow: auto;
-			.original{
+			.thumbs-set{
 				float: left;
 				width: 215px;
 				padding-right: 9px;
+				&:last-child{
+					width: 221px;
+					padding-left: 15px;
+				}
 			}
-			.replica{
-				float: left;
-				width: 221px;
-				padding-left: 15px;
-			}
+			
 			.thumb{
 				width:60px;
 				height: 80px;

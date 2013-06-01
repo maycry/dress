@@ -1,27 +1,13 @@
 <div class="photo">
 	<div class="zoom"></div>
-	<%= image_tag images_original.first.image.url, alt: "#{product.autoname} #{product.code}", data: {width: images_original.first.width, height: images_original.first.height} %>
+	<%= image_tag images.first.image.url, alt: "#{product.autoname} #{product.code}", data: {width: images.first.width, height: images.first.height} %>
 </div>
 
-<% if (images_original.count + images_replica.count) > 1%>
+<% if (images.count) > 1%>
 	<div class="thumbs">
-		<div class="original">
-			<% images_original.each_with_index do |ai, index| %>
-				<div class="thumb<%= index == 0 ? ' active' : '' %>">
-					<%= image_tag ai.image.url(:thumb_small), data: {width: ai.width, height: ai.height, original: ai.image.url} %>
-				</div>
-			<% end %>
-			<p>Оригинальные фото</p>
-		</div>
+		<%= render 'product_thumb-set', images: images_original, label: "Оригинальные фото" %>
 		<% unless images_replica.empty? %>
-		<div class="replica">
-			<% images_replica.each do |ai| %>
-				<div class="thumb">
-					<%= image_tag ai.image.url(:thumb_small), data: {width: ai.width, height: ai.height, original: ai.image.url} %>
-				</div>
-			<% end %>
-			<p>Фото реплик</p>
-		</div>
+		<%= render 'product_thumb-set', images: images_replica, label: "Фото наших реплик" %>
 		<% end %>
 	</div>
 <% end %>

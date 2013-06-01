@@ -1,0 +1,8 @@
+<div class="thumbs-set">
+	<% images.each do |image| %>
+		<div class="thumb">
+			<%= image_tag image.image.url(:thumb_small), data: {width: image.width, height: image.height, original: image.image.url} %>
+		</div>
+	<% end %>
+	<%= content_tag :p, label %>
+</div>

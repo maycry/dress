@@ -1,36 +1,17 @@
 <%= title "#{@product.autoname} #{@product.code}" %>
 <%= description @product.description %>
-<div class="b-popup f-q1 hidden">
-	<div class="close">×</div>
-	<div class="b-slider fotorama" data-width="100%" data-background="#222" data-zoomToFit="false" data-fitToWindowHeight="true" data-fitToWindowHeightMargin="0"> 
-		<%= image_tag "pages/quality/cool-1.jpg" %>
-		<%= image_tag "pages/quality/cool-2.jpg" %>
-		<%= image_tag "pages/quality/cool-3.jpg" %>
-		<%= image_tag "pages/quality/cool-4.jpg" %>
-		<%= image_tag "pages/quality/cool-5.jpg" %>
-		<%= image_tag "pages/quality/cool-6.jpg" %>
-	</div>
-</div>
-<div class="b-popup f-q2 hidden">
-	<div class="close">×</div>
-	<div class="b-slider fotorama" data-width="100%" data-background="#222" data-zoomToFit="false" data-fitToWindowHeight="true" data-fitToWindowHeightMargin="0"> 
-		<%= image_tag "pages/quality/lace-1.jpg" %>
-		<%= image_tag "pages/quality/lace-2.jpg" %>
-		<%= image_tag "pages/quality/lace-3.jpg" %>
-		<%= image_tag "pages/quality/lace-4.jpg" %>
-		<%= image_tag "pages/quality/lace-5.jpg" %>
-		<%= image_tag "pages/quality/lace-6.jpg" %>
-	</div>
-</div>
-<div class="b-popup f-q3 hidden">
-	<div class="close">×</div>
-		<div class="video-frame"><iframe src="http://vk.com/video_ext.php?oid=-48549853&id=164940278&hash=2fde509687c138f9&sd" width="420" height="315" frameborder="0"></iframe></div>
-</div>
+<%= render 'shared/b-popup-slider', id: "1", name: "cool", count: 6 %>
+<%= render 'shared/b-popup-slider', id: "2", name: "lace", count: 6 %>
+<%= render 'shared/b-popup-video',  id: "3", 
+																		link: "http://vk.com/video_ext.php?oid=-48549853&id=164940278&hash=2fde509687c138f9&sd", 
+																		height: "315", 
+																		width: "420" %>
 <section class="b-product-about">
 
 	<div class="look col-1-2">
 		<%= render 'product_gallery', 
 			product: @product,
+			images: @images,
 			images_original: @images_original,
 			images_replica: @images_replica %>
 	</div>

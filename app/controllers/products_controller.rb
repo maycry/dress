@@ -15,8 +15,9 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     #refactor
-    @images_original = @product.attached_images.find_all_by_replica(false)
-    @images_replica = @product.attached_images.find_all_by_replica(true)
+    @images = @product.attached_images.scoped
+    @images_original = @images.find_all_by_replica(false)
+    @images_replica = @images.find_all_by_replica(true)
     @review = Review.order("RANDOM()").first
     @products = Product.where("type_id = ? AND style_id = ? AND id != ?", @product.type, @product.style, @product).limit(5)
   end
