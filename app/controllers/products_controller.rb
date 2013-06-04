@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_filter :get_all_types
-  before_filter :get_all_styles, except: [:show]
+  before_filter :get_all_styles, only: [:home, :index]
 
   def home
     @products_wedding_dresses = Product.newest(1)
@@ -8,13 +8,8 @@ class ProductsController < ApplicationController
     @review = Review.order("RANDOM()").first
   end
 
-  def index
-    @designers = Designer.order("name")
-  end
-
   def show
     @product = Product.find(params[:id])
-    #refactor
     @images = @product.attached_images.scoped
     @images_original = @images.find_all_by_replica(false)
     @images_replica = @images.find_all_by_replica(true)

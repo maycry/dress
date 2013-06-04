@@ -1,9 +1,14 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
 one:
+  id: 1
   name: MyString
   alias: MyString
 
 two:
+  id: 2
+  name: MyString
+  alias: MyString
+
+three:
+  id: 3
   name: MyString
   alias: MyString
