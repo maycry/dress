@@ -1,5 +1,5 @@
 class Style < ActiveRecord::Base
-  attr_accessible :alias, :name, :order, :image
+  attr_accessible :alias, :name, :order, :image, :type_id
   has_many :products
   before_save :add_alias
   has_attached_file :image, 

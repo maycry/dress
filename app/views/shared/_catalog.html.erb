@@ -1,4 +1,4 @@
-<%= render('products/b-categories', type: type, designers: designers, styles: styles, border: border) if (@type.id == 1 && !@selection) %>
+<%= render 'products/b-categories', type: type, designers: designers, styles: styles, border: border %>
 <section class="products-list clr">
 	<%= render products, thumb: thumb %>
 	<%= render 'shared/b-nexterp', :text => "Листать дальше" %>

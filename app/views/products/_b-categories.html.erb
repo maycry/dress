@@ -1,22 +1,24 @@
 <section class='b-categories clr<%= " #{border}" %>'>
 	<div class="col-1-2">
-	<div class="module">
-		<h4>Дизайнеры</h4>
-		<div class="categorie">
-			<% designers.each do |designer| %>
-				<%= nav_link designer.name, type_designer_path(type, designer) %>
-			<% end %>
-		</div>    
-	</div>
-</div>
-<div class="col-1-2">
-	<div class="module">
-		<h4>Фасоны</h4>
-		<div class="categorie">
-			<% styles.each do |style| %>
-				<%= nav_link style.name, type_style_path(type, style) %>
-			<% end %> 
+		<div class="module">
+			<h4>Фасоны</h4>
+			<div class="categorie">
+				<% styles.each do |style| %>
+					<%= nav_link style.name, type_style_path(type, style) %>
+				<% end %> 
+			</div>
 		</div>
 	</div>
-</div>
+	<% if @type.id == 1%>
+	<div class="col-1-2">
+		<div class="module">
+			<h4>Дизайнеры</h4>
+			<div class="categorie">
+				<% designers.each do |designer| %>
+					<%= nav_link designer.name, type_designer_path(type, designer) %>
+				<% end %>
+			</div>    
+		</div>
+	</div>
+	<% end %>
 </section>
