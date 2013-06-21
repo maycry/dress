@@ -4,6 +4,7 @@ body.admin{
 }
 .b-header{
 	height: 84px;
+	position: relative;
 	.logo{
 		h1{
 			background: image_url("logo.png") 0 top no-repeat;
@@ -62,5 +63,7 @@ body.admin{
 		padding-top: 34px;
 		float:right;
 		letter-spacing: 1px;
+		position: absolute;
+		right: 0;
 	}
 }
