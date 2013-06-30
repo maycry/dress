@@ -15,6 +15,7 @@ class AttachedImage < ActiveRecord::Base
 	attr_accessible :image, :image_file_name, :replica, :width, :height
 
 	after_post_process :save_image_dimensions
+	default_scope order("created_at asc")
 
 	def save_image_dimensions
 		geo = Paperclip::Geometry.from_file(image.queued_for_write[:original])
