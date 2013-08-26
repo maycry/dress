@@ -2,7 +2,7 @@
 	<%= f.inputs name: "Контактные данные" do %>
 	  <%= f.input :name, :label => "Ваше имя", :validate => { :presence => true }, :required => false %>
 	  <%= f.input :phone, :label => "Телефон", :validate => { :presence => true }, :required => false  %>
-	  <%= f.input :email, :label => "Имейл" %>
+	  <%= f.input :email, :label => "Имейл", :validate => { :presence => true }, :required => false %>
 	  <%= f.input :product_id, as: 'hidden', value: params[:product_id] %>
 	  <p class="under-form">Все указанные данные, используются только для уточнения заказа и не будут разглашаться третьим лицам.</p>
   <% end %>
