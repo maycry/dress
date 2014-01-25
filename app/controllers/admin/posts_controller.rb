@@ -35,12 +35,21 @@ class Admin::PostsController < AdminController
     @post = Post.new(params[:post])
 
     respond_to do |format|
-      if @post.save
-        format.html { render action: "index"}
-        format.json { render json: edit_admin_post_path(@post), status: :created, location: @post }
+      if params[:post][:image_attributes]
+        @post.save
+        @name = params[:post][:image_attributes][:image][0].original_filename
+        s3 = AWS::S3.new
+        bucket = s3.buckets["makemydress.com.ua"]
+        obj = bucket.objects["blog/#{@post.id}/#{@name}"]
+        obj.write(params[:post][:image_attributes][:image][0].read, :acl => :public_read)
       else
-        format.html { render action: "new" }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        if @post.save
+          format.html { redirect_to admin_posts_url }
+          format.json { render action: 'show', status: :created, location: @post }
+        else
+          format.html { render action: 'new' }
+          format.json { render json: @post.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
