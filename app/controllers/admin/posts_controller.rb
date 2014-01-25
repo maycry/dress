@@ -36,7 +36,7 @@ class Admin::PostsController < AdminController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: "post was successfully created. <a href='#{new_admin_post_path}'>Create new post</a>.".html_safe }
+        format.html { render action: "index"}
         format.json { render json: edit_admin_post_path(@post), status: :created, location: @post }
       else
         format.html { render action: "new" }
@@ -53,8 +53,8 @@ class Admin::PostsController < AdminController
         @name = params[:post][:image_attributes][:image][0].original_filename
         s3 = AWS::S3.new
         bucket = s3.buckets["makemydress.com.ua"]
-        obj = bucket.objects["blog/#{@name}"]
-        obj.write(params[:post][:image_attributes][:image][0].read)
+        obj = bucket.objects["blog/#{@post.id}/#{@name}"]
+        obj.write(params[:post][:image_attributes][:image][0].read, :acl => :public_read)
         format.js
       else
         if @post.update_attributes(params[:post])
